@@ -1,0 +1,3 @@
+jupyterlite-core==0.7.6
+jupyterlite-pyodide-kernel
+jupyterlab~=4.4
