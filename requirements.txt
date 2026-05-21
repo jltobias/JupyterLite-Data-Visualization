@@ -1,3 +1,7 @@
 jupyterlite-core==0.7.6
 jupyterlite-pyodide-kernel==0.7.2
 jupyterlab>=4.5,<4.6
+numpy
+pandas
+matplotlib
+networkx
