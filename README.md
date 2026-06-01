@@ -2,6 +2,10 @@
 
 This repository publishes a browser-runnable JupyterLite notebook demonstrating Python examples for the **Periodic Table of Visualization Methods**.
 
+Periodic Table of Visualization Methods:  https://www.visual-literacy.org/periodic_table/periodic_table.html
+
+Citation: https://gisgeography.com/how-to-cite/ GIS Geography.com: https://gisgeography.com/about-us/
+
 The notebook is prepared for the **Python (Pyodide)** kernel and uses Pyodide-compatible packages:
 
 - `numpy`
