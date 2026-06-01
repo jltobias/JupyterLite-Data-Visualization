@@ -4,7 +4,7 @@ This repository publishes a browser-runnable JupyterLite notebook demonstrating 
 
 Periodic Table of Visualization Methods:  https://www.visual-literacy.org/periodic_table/periodic_table.html
 
-Citation: https://gisgeography.com/how-to-cite/ GIS Geography.com: https://gisgeography.com/about-us/
+Citation:  Oliveira, E.C., Oliveira, L.C., Cardoso, A. et al. Meta-model of information visualization based on Treemap. Univ Access Inf Soc 16, 903–912 (2017). https://doi.org/10.1007/s10209-016-0477-9   URL:  https://doi.org/10.1007/s10209-016-0477-9
 
 The notebook is prepared for the **Python (Pyodide)** kernel and uses Pyodide-compatible packages:
 
