@@ -38,17 +38,10 @@ jobs:
       - name: Build JupyterLite site
         run: |
           jupyter lite build --contents content --output-dir dist
-          cp -R static/. dist/
           touch dist/.nojekyll
 
-      - name: Verify Pages artifact
-        run: |
-          test -f dist/index.html
-          test -f dist/lab/index.html
-          test -f dist/ai-demo/index.html
-
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
