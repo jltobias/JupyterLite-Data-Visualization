@@ -53,3 +53,30 @@ mock page/config responses: removing the tag reproduced that error; the fixed
 page let configuration merge and injected the application bundle with the correct
 project base URL. This checks the loader contract, not a complete browser or
 Pyodide session; browser UI access remained unavailable.
+
+## Section 3 styled-table dependency
+
+The table uses pandas `DataFrame.style`, which needs the optional Jinja2
+package. Jinja2 was listed in desktop build requirements but omitted from the
+browser's `piplite.install` list. Setup now installs and imports it explicitly.
+The published-notebook checker now rejects a notebook using `.style` if its
+browser setup omits Jinja2; it rejected the previous artifact and passed after
+the source and release copies were updated.
+
+A separate fresh WebAssembly Python test used the exact Pyodide 0.29.3 runtime
+specified by the lab's kernel settings, with Python 3.13.2 and pandas 2.3.3.
+It executed the notebook's actual `programs` definition and section 3 code:
+
+- Without Jinja2, it reproduced the reported `.style` AttributeError.
+- After loading Jinja2 3.1.6 and MarkupSafe 3.0.2, the same cell rendered a
+  five-row HTML table, with benefit/cost ratios sorted descending.
+
+This test used the Python WebAssembly runtime under Node.js, not a browser UI.
+Runtime files and wheels were downloaded from the official Pyodide distribution
+into the ignored build folder; package wheel hashes were checked against its
+manifest. The Node.js test executable came from the official distribution and
+was verified against its published SHA-256. None of those test binaries are
+committed or included in the published site.
+
+For a reader's older saved notebook, installing Jinja2 once with `piplite` and
+rerunning section 3 fixes the current session without clearing browser storage.

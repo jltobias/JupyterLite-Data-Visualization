@@ -30,6 +30,7 @@ The notebook is prepared for the **Python (Pyodide)** kernel and uses Pyodide-co
 - `matplotlib`
 - `networkx`
 - `scipy` (required by the Kamada–Kawai network layout)
+- `jinja2` (required by the styled table in section 3)
 
 The current notebooks generate their teaching datasets in code; they do not fetch real-world CSVs. JupyterLite downloads its Python runtime and packages as needed. The static book displays outputs generated during publication.
 
@@ -44,6 +45,15 @@ content/periodic_table_visualization_methods_python_examples_jupyterlite_REVISED
 The lab launch link above opens `visualization_methods_v2.ipynb`, a release copy generated from this maintained source during the build. Both use the same code and contain no copy of the original periodic-table artwork.
 
 **If you still see the old graphic:** JupyterLite gives browser-saved notebooks precedence over newer server copies. Close the old notebook tab and use [Open the current notebook](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=visualization_methods_v2.ipynb&reset). Your older files and edits remain in browser storage; download any work you want to keep. See [JupyterLite's content storage documentation](https://jupyterlite.readthedocs.io/en/stable/howto/content/files.html#server-contents-and-local-contents).
+
+**If section 3 in an older saved copy reports that `.style` requires Jinja2:** run this once in a code cell, then rerun section 3:
+
+```python
+import piplite
+await piplite.install("jinja2")
+```
+
+The current source notebook installs Jinja2 in setup. Desktop packages listed in `requirements.txt` do not automatically install into the browser kernel. This command also repairs an already-open session without deleting its saved work.
 
 Published project home:
 

@@ -1,5 +1,6 @@
 """Check advertised destinations, published notebooks, and the removed artwork."""
 
+import ast
 import base64
 import hashlib
 from html.parser import HTMLParser
@@ -63,6 +64,18 @@ def main():
             assert destination.is_file(), f"Broken link in {page.name}: {target}"
     for path in (SITE / "files").rglob("*.ipynb"):
         notebook = json.loads(path.read_text(encoding="utf-8"))
+        code = "\n".join("".join(cell["source"]) for cell in notebook["cells"] if cell["cell_type"] == "code")
+        syntax = ast.parse(code)
+        if any(isinstance(node, ast.Attribute) and node.attr == "style" for node in ast.walk(syntax)):
+            # Styler's optional dependency is not pulled in by installing pandas.
+            browser_packages = set()
+            for node in ast.walk(syntax):
+                if (isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
+                        and isinstance(node.func.value, ast.Name) and node.func.value.id == "piplite"
+                        and node.func.attr == "install" and node.args):
+                    requested = ast.literal_eval(node.args[0])
+                    browser_packages.update([requested] if isinstance(requested, str) else requested)
+            assert "jinja2" in browser_packages, f"Styled table missing browser Jinja2 dependency: {path}"
         for cell in notebook["cells"]:
             for attachment in cell.get("attachments", {}).values():
                 for mime, value in attachment.items():
