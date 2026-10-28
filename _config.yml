@@ -1,0 +1,31 @@
+title: Data Visualization — Explore, Explain, Understand
+author: JupyterLite Data Visualization contributors
+copyright: "2026"
+only_build_toc_files: true
+exclude_patterns:
+  - _build
+  - dist
+  - .venv
+  - _bmad
+  - _bmad-output
+  - "**/.ipynb_checkpoints"
+execute:
+  execute_notebooks: cache
+  timeout: 180
+  allow_errors: false
+repository:
+  url: https://github.com/jltobias/JupyterLite-Data-Visualization
+  branch: main
+html:
+  use_repository_button: true
+  use_issues_button: true
+  baseurl: https://jltobias.github.io/JupyterLite-Data-Visualization/book/
+  extra_footer: >-
+    Project licensing is undecided. The original periodic-table artwork is
+    linked, not reproduced. See References and attribution.
+sphinx:
+  config:
+    nb_kernel_rgx_aliases:
+      "^python$": python3
+    html_theme_options:
+      use_download_button: true

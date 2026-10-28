@@ -1,3 +1,10 @@
 # Local BMAD runtime generated while applying the build workflow.
 /_bmad/
 /_bmad.setup-*/
+/.venv/
+/_build/
+/dist/
+/.jupyter_cache/
+/.jupyterlite.doit.db*
+**/__pycache__/
+**/.ipynb_checkpoints/

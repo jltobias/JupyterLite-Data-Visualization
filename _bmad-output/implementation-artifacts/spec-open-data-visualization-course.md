@@ -101,6 +101,13 @@ push/deployment requires a separate concrete publication decision.
   the temporary extraction was deleted, and README attribution was added.
   Project licensing remains undecided. The broader course build is still
   pending specification approval.
+- 2026-10-28: the owner subsequently requested the missing README splash and
+  working book/lab links. The narrower publishing change now builds the existing
+  catalog as a Jupyter Book, assembles the landing page and lab, provides a fresh
+  release notebook path, and checks routes, figures, notices, and poster removal.
+  Two label bugs, portable box-plot ticks, SciPy setup, and desktop inline output
+  were repaired to support publication. The eight-lesson open-data curriculum
+  remains outside this completed publishing change and this full spec stays draft.
 
 ## Spec Change Log
 

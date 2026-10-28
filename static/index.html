@@ -1,2 +1,39 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JupyterLite Data Visualization + AI</title><style>:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:light}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#f6f8fb,#eaf1f8);color:#172133}main{max-width:980px;margin:0 auto;padding:64px 24px}.hero{background:#fff;border:1px solid #dce5ef;border-radius:22px;padding:40px;box-shadow:0 18px 50px rgba(30,55,85,.10)}h1{margin:0 0 14px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05}p{font-size:1.08rem;line-height:1.65;color:#45556d}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}a{display:inline-block;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700}.primary{background:#1261a0;color:#fff}.secondary{background:#eef4f9;color:#17324d}.note{margin-top:26px;padding:16px 18px;background:#f7fafc;border-left:4px solid #1261a0;border-radius:8px}</style></head><body><main><section class="hero"><div style="font-weight:800;color:#1261a0;letter-spacing:.06em;text-transform:uppercase">Browser-only demonstration</div><h1>JupyterLite Data Visualization + AI</h1><p>Explore the visualization notebook in a full JupyterLab-style environment, then discuss methods, code, interpretation, and next steps with an AI assistant in the same browser.</p><div class="actions"><a class="primary" href="ai-demo/">Launch extended AI demo</a><a class="secondary" href="lab/index.html">Open JupyterLite Lab</a></div><div class="note"><strong>Privacy note:</strong> the default Local Browser AI mode runs inference on the user's device. No OpenAI or HHS credentials are stored in this static GitHub Pages site.</div></section></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Read the visualization book and run its Python notebooks in JupyterLite, directly in your browser.">
+  <title>Data Visualization — Explore. Explain. Understand.</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172b3b;background:#f2f6f8;line-height:1.6}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:40px 24px 64px}
+    .cover{display:block;width:100%;height:auto;border-radius:18px}h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:28px 0 12px}
+    .intro{max-width:760px;font-size:1.15rem;color:#3c5363}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    .button{display:inline-block;padding:12px 20px;border-radius:8px;background:#0c566b;color:#fff;text-decoration:none;font-weight:700}
+    .secondary{background:#dcebee;color:#153e4c}a{color:#075d77}a:focus-visible{outline:3px solid #c5680c;outline-offset:4px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+    article{background:#fff;border:1px solid #d2dfe5;border-radius:12px;padding:24px}article h2{margin:0 0 10px;font-size:1.25rem}
+    .note{margin-top:28px;font-size:.95rem;color:#475e6d}footer{margin-top:32px;border-top:1px solid #cbd9df;padding-top:18px}
+  </style>
+</head>
+<body>
+<main>
+  <img class="cover" src="assets/visualization-splash.png" width="2172" height="724" alt="Charts and networks connect to a globe, world map, and illustrative underground scene.">
+  <h1>Turn visual forms into understanding.</h1>
+  <p class="intro">Explore an illustrated catalog of visualization methods. Read the code and figures in the book, then experiment with the same examples in a Python lab running in your browser.</p>
+  <nav class="actions" aria-label="Start exploring">
+    <a class="button" href="book/">Read the Jupyter Book</a>
+    <a class="button secondary" href="lab/index.html?path=visualization_methods_v2.ipynb&amp;reset">Open JupyterLite Lab</a>
+  </nav>
+  <section class="cards" aria-label="Ways to learn">
+    <article><h2>Choose a visual form</h2><p>Compare charts, relationships, process diagrams, and strategy sketches. Ask what each view makes easier to see.</p><a href="book/content/periodic_table_visualization_methods_python_examples_jupyterlite_REVISED.html">Browse the illustrated catalog</a></article>
+    <article><h2>Change the evidence</h2><p>Run setup, select an example, and change its data or encoding. The current examples use synthetic teaching data.</p><a href="lab/index.html?path=visualization_methods_v2.ipynb&amp;reset">Run the current notebook</a></article>
+    <article><h2>Discuss your choices</h2><p>Optionally paste a chart description or code into the existing AI demo. The course works without an AI model.</p><a href="ai-demo/">Open the optional AI demo</a></article>
+  </section>
+  <p class="note">If a previous browser session still displays the removed periodic-table poster, use the lab link above to open the fresh release copy. Your saved notebooks remain in browser storage. Download edits you want to keep.</p>
+  <p class="note">The splash is conceptual AI-generated cover art; its map and underground scene are illustrative. The original periodic-table artwork is linked in the references and is not reproduced here. Project licensing remains undecided.</p>
+  <footer><a href="book/references.html">References and attribution</a> · <a href="https://github.com/jltobias/JupyterLite-Data-Visualization">Source repository</a></footer>
+</main>
+</body>
+</html>

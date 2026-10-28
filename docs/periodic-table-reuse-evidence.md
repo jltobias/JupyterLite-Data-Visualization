@@ -111,8 +111,9 @@ No permission request has been sent.
 
 ## Removal verification
 
-- Compared the notebook with Git HEAD: only markdown cell 1 changed; all 101
-  executable cells and notebook metadata are identical.
+- At removal commit `021876e`, comparison with its preceding commit showed
+  only markdown cell 1 changed; all 101 executable cells and notebook metadata
+  were identical. Later publishing fixes are separate from that removal check.
 - Both notebook files pass nbformat schema validation. The AI starter retains
   its pre-existing missing-cell-ID warning; this removal did not modify it.
 - Scanned both notebooks for attachments, image outputs, inline image payloads,

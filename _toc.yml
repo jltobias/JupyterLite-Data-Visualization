@@ -1,0 +1,9 @@
+format: jb-book
+root: intro
+chapters:
+  - file: content/periodic_table_visualization_methods_python_examples_jupyterlite_REVISED
+    title: Visualization methods — illustrated catalog
+  - file: content/ai_visualization_starter
+    title: Practice and optional AI discussion
+  - file: references
+    title: References and attribution

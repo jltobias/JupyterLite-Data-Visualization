@@ -1,4 +1,4 @@
-name: Deploy JupyterLite to GitHub Pages
+name: Deploy Jupyter Book and JupyterLite to GitHub Pages
 
 on:
   push:
@@ -30,15 +30,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install JupyterLite
+      - name: Install publishing dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Build JupyterLite site
-        run: |
-          jupyter lite build --contents content --output-dir dist
-          touch dist/.nojekyll
+      - name: Build and verify book, lab, and splash page
+        run: python scripts/build_site.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

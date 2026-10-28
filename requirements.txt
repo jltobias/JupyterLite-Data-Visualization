@@ -1,8 +1,11 @@
 jupyterlite-core==0.7.6
 jupyterlite-pyodide-kernel==0.7.2
 jupyterlab>=4.5,<4.6
+jupyter-book==1.0.4.post1
+jupyter-server>=2.14,<3
 numpy
 pandas
 matplotlib
 networkx
+scipy
 jinja2
