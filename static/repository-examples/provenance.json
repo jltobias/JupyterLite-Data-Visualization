@@ -1,0 +1,16 @@
+{
+  "title": "USGS January 2024 Japan earthquake teaching selection",
+  "source": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-02-01&minmagnitude=4.5&minlatitude=30&maxlatitude=46&minlongitude=128&maxlongitude=148&orderby=time-asc",
+  "retrieved_utc": "2026-10-28T21:49:50.672397+00:00",
+  "credit": "U.S. Geological Survey Earthquake Hazards Program",
+  "terms": "USGS-authored US government products are generally public domain; third-party content is excluded from that guidance",
+  "terms_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "units": "longitude/latitude degrees; depth_km positive downward; UTC ISO 8601; reported magnitude/type",
+  "projection": "Local equirectangular approximation; origin 138 E, 38 N; sphere radius 6371 km; scene z=-depth_km × visible exaggeration",
+  "geometry": "GIS handoff uses 2D WGS84 lon/lat; depth remains a named property, not GeoJSON altitude",
+  "selection": "2024-01-01 inclusive to 2024-02-01 exclusive UTC, magnitude >=4.5, latitude 30–46, longitude 128–148",
+  "limitations": "Catalog selection, revised events and mixed magnitude types; distortion in the local approximation; no location/depth uncertainty, fault surface or prediction",
+  "input_sha256": "385718a4fe92e98ad301efe3f2ae0d96557aa53faafc62b48785e239f3b90cfa",
+  "scene_sha256": "cffa72b3009850c293913dbaba94afea6582f879d24c81184563e933301ece02",
+  "transformation": "Select tidy source fields; numeric conversion only; all 78 events preserved. Optional scene filtering happens locally. GeoJSON geometry is two-dimensional and unexaggerated."
+}

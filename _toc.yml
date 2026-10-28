@@ -5,5 +5,17 @@ chapters:
     title: Visualization methods — illustrated catalog
   - file: content/ai_visualization_starter
     title: Practice and optional AI discussion
+  - file: content/repository_examples/index
+    title: Repository-inspired companion lessons
+    sections:
+      - file: content/repository_examples/01_repository_atlas
+      - file: content/repository_examples/02_nasa_climate
+      - file: content/repository_examples/03_noaa_sea_level
+      - file: content/repository_examples/04_historical_cholera
+      - file: content/repository_examples/05_spatial_privacy
+      - file: content/repository_examples/06_stac_discovery
+      - file: content/repository_examples/07_usgs_earthquake_scenes
+      - file: content/repository_examples/08_coralwatch
+      - file: content/repository_examples/09_storytelling_and_gis
   - file: references
     title: References and attribution

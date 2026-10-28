@@ -55,16 +55,20 @@ def export_license_files() -> None:
 
 def main() -> None:
     BUILD.mkdir(exist_ok=True)
+    run(sys.executable, str(ROOT / "scripts" / "check_repository_examples.py"))
+    run(sys.executable, str(ROOT / "scripts" / "package_repository_scene.py"))
     lite_content = BUILD / "lite-content"
-    shutil.copytree(ROOT / "content", lite_content, dirs_exist_ok=True)
+    shutil.copytree(ROOT / "content", lite_content, dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("__pycache__", "exports", ".data-refresh-*", ".data-previous"))
     # A fresh path avoids a previous browser-saved notebook taking precedence.
     # It leaves the reader's older files and edits in their existing browser store.
     shutil.copy2(ROOT / "content" / SOURCE_NOTEBOOK, lite_content / RELEASE_NOTEBOOK)
     run(sys.executable, "-m", "jupyter", "lite", "build", "--contents", str(lite_content), "--output-dir", str(SITE))
     book_command = str(Path(sys.executable).parent / ("jupyter-book.exe" if os.name == "nt" else "jupyter-book"))
-    run(book_command, "build", str(ROOT), "--warningiserror", "--keep-going")
+    run(book_command, "build", str(ROOT), "--all", "--warningiserror", "--keep-going")
     shutil.copytree(BUILD / "html", SITE / "book", dirs_exist_ok=True)
-    shutil.copytree(ROOT / "static", SITE, dirs_exist_ok=True)
+    shutil.copytree(ROOT / "static", SITE, dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("*.template.html"))
     shutil.copytree(ROOT / "assets", SITE / "assets", dirs_exist_ok=True)
     (SITE / ".nojekyll").touch()
     export_license_files()

@@ -8,3 +8,6 @@
 /.jupyterlite.doit.db*
 **/__pycache__/
 **/.ipynb_checkpoints/
+/content/repository_examples/exports/
+/content/repository_examples/.data-refresh-*/
+/content/repository_examples/.data-previous/

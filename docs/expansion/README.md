@@ -3,6 +3,12 @@
 Prepared 2026-10-28 for the requested expansion. These are research and design
 artifacts; they do not claim that the proposed lessons or integrations already run.
 
+The bounded [repository-inspired companion lessons](../../content/repository_examples/index.md)
+are now implemented with original code, packaged evidence and an earthquake
+story. Their [source input register](companion-source-evidence.md) and
+[implementation specification](../../_bmad-output/implementation-artifacts/spec-repository-companion-notebooks.md)
+are separate from the broader 100-method course and full GIS integration drafts.
+
 - [Implementation specification](../../_bmad-output/implementation-artifacts/spec-100-elements-and-browser-geospatial-lab.md):
   proposed scope, constraints, tasks, and acceptance checks for approval.
 - [100-element course matrix](100-element-coverage.md): a specific question,

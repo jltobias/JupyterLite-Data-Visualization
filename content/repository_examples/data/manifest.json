@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "retrieved_utc": "2026-10-28T21:49:50.672397+00:00",
+  "sources": {
+    "notices": {
+      "title": "Companion source and reuse notices",
+      "kind": "original attribution register",
+      "units": "one source-specific statement per dataset",
+      "attribution": "Source-specific authors/providers named in this document and retained metadata",
+      "terms": "Individual dataset/metadata terms apply; project licensing remains undecided",
+      "terms_url": "https://github.com/jltobias/JupyterLite-Data-Visualization/blob/main/references.md",
+      "limitation": "Not a project-wide license grant or clearance of unrelated upstream assets."
+    },
+    "atlas": {
+      "title": "Curated inspected sample of 18 related repositories",
+      "kind": "curated source-review metadata",
+      "units": "one inspected repository per row; lesson connections are editorial choices",
+      "attribution": "Pinned source reviews in docs/expansion/related-repositories.md and phi-case-studies.md, inspected 2026-10-28",
+      "terms": "Original factual index and lesson connections; linked repository licenses are scoped evidence, not permission for all assets",
+      "terms_url": "https://github.com/jltobias/JupyterLite-Data-Visualization/tree/main/docs/expansion",
+      "limitation": "A curated inspected sample, not a comprehensive inventory, quality score, popularity ranking or live runtime test."
+    },
+    "nasa": {
+      "title": "NASA GISTEMP v4 global annual temperature anomaly",
+      "kind": "observational estimate",
+      "units": "degrees C relative to 1951–1980",
+      "attribution": "GISTEMP Team (2026); Lenssen et al. (2024), doi:10.1029/2023JD040179",
+      "terms": "NASA data reuse guidance; upstream repository software license does not apply to these observations",
+      "terms_url": "https://data.giss.nasa.gov/gistemp/",
+      "limitation": "Global estimated anomalies, not local temperatures or health outcomes. Original source retrieval 2026-10-09."
+    },
+    "noaa": {
+      "title": "NOAA CO-OPS Sewells Point monthly mean water levels, 2000–2024",
+      "kind": "observational estimate",
+      "units": "meters, station MSL datum, GMT",
+      "attribution": "NOAA National Ocean Service, CO-OPS, station 8638610",
+      "terms": "NOAA/NOS government information reuse guidance; credit NOAA, inspect any third-party exclusions",
+      "terms_url": "https://oceanservice.noaa.gov/about/faq.html",
+      "limitation": "Local relative sea level; not global sea-level rise, an inundation surface, or a forecast."
+    },
+    "cholera": {
+      "title": "Digitized 1854 London cholera deaths and pumps",
+      "kind": "historical records",
+      "units": "recorded deaths per mapped location; WGS84 longitude/latitude degrees",
+      "attribution": "PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic, 476f6dd5a8430e6eb823e79614fda1d7e12a78fb; supplied via GeoLibre-GeoAI dda3a4667a1267b5ac4858723c46d8c0c82cb7a6",
+      "terms": "GPL-3.0 bundle: retain cholera/LICENSE and provenance; separate from undecided project license",
+      "terms_url": "https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic/blob/476f6dd5a8430e6eb823e79614fda1d7e12a78fb/LICENSE",
+      "limitation": "250 locations / 489 recorded deaths. Digitization completeness not independently verified; no dates, denominators, controls or causal labels."
+    },
+    "coral": {
+      "title": "CoralWatch single opportunistic survey, 20 colonies",
+      "kind": "citizen-science observations",
+      "units": "colour chart index, 1–6",
+      "attribution": "CoralWatch / BioCollect survey bd39e449-038f-4d45-ab6d-b56922a6f532; source-specific attribution in metadata",
+      "terms": "CC BY 4.0 for this survey extract; retain metadata and attribution",
+      "terms_url": "https://creativecommons.org/licenses/by/4.0/",
+      "limitation": "Two paired readings on each colony; no coordinates/personal fields/photos. Not bleaching percentage, reef coverage, temperature or representative reef sampling."
+    },
+    "worldpop": {
+      "title": "WorldPop UGA_DUG_2020 STAC Item and collection",
+      "kind": "catalog metadata",
+      "units": "footprint degrees; Degree of Urbanisation product reference year 2020",
+      "attribution": "Bondarenko et al., WorldPop / University of Southampton (2026), doi:10.5258/SOTON/WP00879",
+      "terms": "CC BY 4.0 identified in collection and item TIFF copyright; inspect asset-specific terms before downloading",
+      "terms_url": "https://creativecommons.org/licenses/by/4.0/",
+      "limitation": "Metadata and footprint only. No population counts, land-cover proportions or raster pixels have been sampled. Publication year differs from reference year."
+    },
+    "sentinel": {
+      "title": "Earth Search Sentinel-2 L2A Gaborone bounded January 2024 search",
+      "kind": "catalog metadata",
+      "units": "footprints degrees; eo:cloud_cover percent for whole item",
+      "attribution": "Contains modified Copernicus Sentinel data (2024), processed by Element 84; metadata selection by this course",
+      "terms": "Collection license label is proprietary; Copernicus Sentinel Data Legal Notice applies. This is not a CC/MIT dataset declaration.",
+      "terms_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "limitation": "First 8 returned Items, not all January scenes. Cloud metadata is not local cloud sampling; metadata is not imagery or TB evidence."
+    },
+    "usgs": {
+      "title": "USGS January 2024 Japan earthquakes, magnitude ≥4.5",
+      "kind": "event catalog observations",
+      "units": "longitude/latitude degrees; depth km positive downward; UTC milliseconds; reported magnitude type",
+      "attribution": "U.S. Geological Survey Earthquake Hazards Program",
+      "terms": "USGS-authored US government products are generally public domain; third-party content is excluded from that guidance",
+      "terms_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "limitation": "Bounded catalog selection with event revisions and mixed magnitude types. Not an earthquake prediction or a complete seismicity census."
+    }
+  },
+  "files": {
+    "repository_atlas.csv": {
+      "sha256": "b21c08eaef3397607d83efd9ad7d41dfc53befb63dc572089deb7bbd409794e3",
+      "bytes": 5407,
+      "source": "atlas",
+      "url": null,
+      "columns": [
+        "repository",
+        "readme_url",
+        "commit",
+        "collection",
+        "lessons",
+        "connection",
+        "rights_evidence"
+      ],
+      "rows": 18,
+      "transformation": "Pinned README/commit facts extracted from the two reviewed repository tables; original lesson connections and scoped rights summaries"
+    },
+    "nasa/nasa-gistemp-raw.csv": {
+      "sha256": "c9ce0750ca93a8241c42fe86cd5bf54d07b28b21ae650b0ae49a206907018cd9",
+      "bytes": 12887,
+      "source": "nasa",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/nasa-gistemp-raw.csv",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "nasa/global-temperature.csv": {
+      "sha256": "2cdda53c73d89f0d729c909b5430fd9ccb332054a7b90684f4fc807ac2e9f902",
+      "bytes": 3018,
+      "source": "nasa",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/global-temperature.csv",
+      "columns": [
+        "year",
+        "anomaly_c",
+        "data_type"
+      ],
+      "rows": 146,
+      "transformation": null
+    },
+    "nasa/provenance.json": {
+      "sha256": "e0dc5bf5b7dc9d1a64fceaed0452de9f03252194bdd671444a3e3e21f1f94786",
+      "bytes": 1541,
+      "source": "nasa",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/provenance.json",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "coral/coralwatch_random_survey_20.csv": {
+      "sha256": "13481ef25fd65ae103e80a5d27bfbb0ad077e1bde80c89bc7b16977253bded03",
+      "bytes": 2634,
+      "source": "coral",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/coralwatch_random_survey_20.csv",
+      "columns": [
+        "survey_record_id",
+        "sample_id",
+        "event_datetime_source",
+        "country",
+        "reef_context",
+        "coral_form",
+        "lightest_colour_score",
+        "darkest_colour_score",
+        "average_colour_score",
+        "location_accuracy_value_source"
+      ],
+      "rows": 20,
+      "transformation": null
+    },
+    "coral/coralwatch_random_survey_20.metadata.json": {
+      "sha256": "270edea54d6a3d013a0be96b4e8adce46f90ae88ffff4982a7229d654925341c",
+      "bytes": 5897,
+      "source": "coral",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/coralwatch_random_survey_20.metadata.json",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "cholera/cholera_deaths.csv": {
+      "sha256": "1be1926dca480fe8c9a83b663e62758e57c7ebe6c296d6a32c5e93a50d62b40a",
+      "bytes": 6607,
+      "source": "cholera",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/cholera_deaths.csv",
+      "columns": [
+        "FID",
+        "DEATHS",
+        "LON",
+        "LAT"
+      ],
+      "rows": 250,
+      "transformation": null
+    },
+    "cholera/pumps.csv": {
+      "sha256": "6ad041659f2dc2abf9048aa4c08c01a9a7d181bd19684f76c74b7df7a4b4b830",
+      "bytes": 333,
+      "source": "cholera",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/pumps.csv",
+      "columns": [
+        "FID",
+        "LON",
+        "LAT",
+        "Street"
+      ],
+      "rows": 8,
+      "transformation": null
+    },
+    "cholera/README.md": {
+      "sha256": "dce592447ce093a588197ce5fa4cd19d6e73c4face0790782fdf5d55ef56d4e0",
+      "bytes": 1247,
+      "source": "cholera",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/README.md",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "cholera/provenance.json": {
+      "sha256": "66004f93acbfcb234ab23d6eb04de774a50a9bb030abea52622e180031cb5c97",
+      "bytes": 1447,
+      "source": "cholera",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/provenance.json",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "cholera/LICENSE": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "source": "cholera",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/LICENSE",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "noaa/raw.json": {
+      "sha256": "90a39d8214007262453c8d0ae425b65e844ee887ded57845fe075eeb38a0c044",
+      "bytes": 83152,
+      "source": "noaa",
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=monthly_mean&application=JupyterLiteDataVisualization&begin_date=20000101&end_date=20241231&datum=MSL&station=8638610&time_zone=gmt&units=metric&format=json",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "noaa/monthly.csv": {
+      "sha256": "8d526956f822f0bbc0966b182300d91b5a09f7b3d5be6a6ccc553312939c7cc9",
+      "bytes": 8770,
+      "source": "noaa",
+      "url": null,
+      "columns": [
+        "year",
+        "month",
+        "msl_m",
+        "highest_m",
+        "lowest_m",
+        "inferred"
+      ],
+      "rows": 300,
+      "transformation": "raw.data: year/month to integer; MSL/highest/lowest to meter-valued numbers; inferred retained; no interpolation"
+    },
+    "stac/worldpop-item.json": {
+      "sha256": "e83dfe910146a1b288f397d11da6a99af639c32f2c19f238dc7e6ebe9985d5e5",
+      "bytes": 6443,
+      "source": "worldpop",
+      "url": "https://api.stac.worldpop.org/collections/UGA/items/UGA_DUG_2020",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "stac/worldpop-collection.json": {
+      "sha256": "e3409c17330dbe5644cc9055e9f8d021959dfd1fdea152521687266d43b52d97",
+      "bytes": 2320,
+      "source": "worldpop",
+      "url": "https://api.stac.worldpop.org/collections/UGA",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "stac/sentinel-search.json": {
+      "sha256": "5ed110ff59ef898575c9d7026da36a5c857d82f81eb07f86718970ebe515194f",
+      "bytes": 171965,
+      "source": "sentinel",
+      "url": "https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a&bbox=25.7%2C-24.9%2C26.2%2C-24.4&datetime=2024-01-01T00%3A00%3A00Z%2F2024-01-31T23%3A59%3A59Z&limit=8",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "stac/sentinel-collection.json": {
+      "sha256": "9c5fe9a8c8785d8439a1697cd91adc21f7ac45f7f3b95786c1398904c413975e",
+      "bytes": 18299,
+      "source": "sentinel",
+      "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "usgs/events.geojson": {
+      "sha256": "385718a4fe92e98ad301efe3f2ae0d96557aa53faafc62b48785e239f3b90cfa",
+      "bytes": 55166,
+      "source": "usgs",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-02-01&minmagnitude=4.5&minlatitude=30&maxlatitude=46&minlongitude=128&maxlongitude=148&orderby=time-asc",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "usgs/events.csv": {
+      "sha256": "1a1f3f563cd963561b459c12f3001fced4c7ed196eba74826c1b8130c255d057",
+      "bytes": 15396,
+      "source": "usgs",
+      "url": null,
+      "columns": [
+        "id",
+        "longitude",
+        "latitude",
+        "depth_km",
+        "time_utc",
+        "magnitude",
+        "magnitude_type",
+        "place",
+        "updated_utc",
+        "source_url"
+      ],
+      "rows": 78,
+      "transformation": "GeoJSON point coordinates preserved as lon/lat/depth_km; time/updated UTC milliseconds converted to ISO 8601; reported magnitudes and types retained"
+    },
+    "notices/CC-BY-4.0.txt": {
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "bytes": 17023,
+      "source": "coral",
+      "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/licenses/CC-BY-4.0.txt",
+      "columns": null,
+      "rows": null,
+      "transformation": null
+    },
+    "NOTICES.md": {
+      "sha256": "bf46a240d8df7d8805cdc3f30c5837f3c9faed91971669520f81177fa58f0827",
+      "bytes": 4872,
+      "source": "notices",
+      "url": null,
+      "columns": null,
+      "rows": null,
+      "transformation": "Original source/terms register compiled from inspected input evidence"
+    }
+  }
+}

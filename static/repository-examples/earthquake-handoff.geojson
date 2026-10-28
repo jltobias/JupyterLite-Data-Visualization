@@ -1,0 +1,1578 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "USGS January 2024 Japan earthquake teaching selection",
+    "source": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-02-01&minmagnitude=4.5&minlatitude=30&maxlatitude=46&minlongitude=128&maxlongitude=148&orderby=time-asc",
+    "retrieved_utc": "2026-10-28T21:49:50.672397+00:00",
+    "credit": "U.S. Geological Survey Earthquake Hazards Program",
+    "terms": "USGS-authored US government products are generally public domain; third-party content is excluded from that guidance",
+    "terms_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "units": "longitude/latitude degrees; depth_km positive downward; UTC ISO 8601; reported magnitude/type",
+    "projection": "Local equirectangular approximation; origin 138 E, 38 N; sphere radius 6371 km; scene z=-depth_km × visible exaggeration",
+    "geometry": "GIS handoff uses 2D WGS84 lon/lat; depth remains a named property, not GeoJSON altitude",
+    "selection": "2024-01-01 inclusive to 2024-02-01 exclusive UTC, magnitude >=4.5, latitude 30–46, longitude 128–148",
+    "limitations": "Catalog selection, revised events and mixed magnitude types; distortion in the local approximation; no location/depth uncertainty, fault surface or prediction"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "us6000m0xj",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2491,
+          37.4933
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:06:05.477000+00:00",
+        "magnitude": 5.8,
+        "magnitude_type": "mb",
+        "place": "42 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:16.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xj"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xl",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.271,
+          37.4874
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:10:09.476000+00:00",
+        "magnitude": 7.5,
+        "magnitude_type": "mww",
+        "place": "2024 Noto Peninsula, Japan Earthquake",
+        "updated_utc": "2026-10-10T06:13:09.213000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xm",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8272,
+          37.1895
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:18:41.584000+00:00",
+        "magnitude": 6.2,
+        "magnitude_type": "mb",
+        "place": "8 km SW of Anamizu, Japan",
+        "updated_utc": "2025-01-04T22:53:01.431000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xm"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m34g",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2254,
+          37.3802
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:27:28.747000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "33 km ENE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:12.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m34g"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m33l",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8046,
+          37.3496
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:28:15.144000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "15 km NNW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:05.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33l"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m34h",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2642,
+          37.4638
+        ]
+      },
+      "properties": {
+        "depth_km": 10.997,
+        "time_utc": "2024-01-01T07:29:04.242000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mb",
+        "place": "41 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:12.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m34h"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xn",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.4519,
+          37.4861
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:39:49.268000+00:00",
+        "magnitude": 5.2,
+        "magnitude_type": "mb",
+        "place": "56 km ENE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:17.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m33v",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2483,
+          37.4693
+        ]
+      },
+      "properties": {
+        "depth_km": 9.896,
+        "time_utc": "2024-01-01T07:42:43.430000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "40 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:07.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33v"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m33u",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7515,
+          37.7823
+        ]
+      },
+      "properties": {
+        "depth_km": 4.785,
+        "time_utc": "2024-01-01T07:45:30.869000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mb",
+        "place": "59 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:40:07.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33u"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xp",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8374,
+          37.2779
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:48:14.335000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "7 km NW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:18.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xp"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m33m",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.5518,
+          37.6242
+        ]
+      },
+      "properties": {
+        "depth_km": 8.243,
+        "time_utc": "2024-01-01T07:54:21.406000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mb",
+        "place": "70 km NNW of Itoigawa, Japan",
+        "updated_utc": "2024-03-09T21:40:05.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33m"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xt",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8875,
+          37.2997
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T07:56:47.661000+00:00",
+        "magnitude": 5.6,
+        "magnitude_type": "mww",
+        "place": "7 km N of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:18.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xt"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xu",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.401,
+          37.5444
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:02:44.840000+00:00",
+        "magnitude": 5.0,
+        "magnitude_type": "mb",
+        "place": "56 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:18.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xu"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xw",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6149,
+          37.1718
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:07:10.627000+00:00",
+        "magnitude": 5.1,
+        "magnitude_type": "mb",
+        "place": "26 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:19.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xw"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m33y",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.3097,
+          37.5918
+        ]
+      },
+      "properties": {
+        "depth_km": 9.216,
+        "time_utc": "2024-01-01T08:15:38.177000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "53 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:08.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33y"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xx",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2009,
+          37.5012
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:17:46.634000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "39 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:19.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xx"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0xy",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2239,
+          37.4631
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:22:10.846000+00:00",
+        "magnitude": 4.9,
+        "magnitude_type": "mb",
+        "place": "38 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:19.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0y1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.5274,
+          37.5787
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:29:02.262000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mb",
+        "place": "66 km NNW of Itoigawa, Japan",
+        "updated_utc": "2024-03-09T21:38:20.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m341",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.6044,
+          37.6483
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:42:04.871000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "71 km NNW of Itoigawa, Japan",
+        "updated_utc": "2024-03-09T21:40:09.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m341"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0y7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.5542,
+          37.8651
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T08:48:21.162000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "72 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:38:21.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y7"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0y9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.4185,
+          37.5339
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:03:48.859000+00:00",
+        "magnitude": 5.5,
+        "magnitude_type": "mb",
+        "place": "56 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:22.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y9"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m35b",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.4557,
+          37.4672
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:06:13.801000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "55 km ENE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:40:16.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m35b"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0ya",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.4029,
+          37.5146
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:08:17.603000+00:00",
+        "magnitude": 5.6,
+        "magnitude_type": "mb",
+        "place": "54 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:22.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0ya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0ye",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.3585,
+          37.4998
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:30:21.401000+00:00",
+        "magnitude": 5.2,
+        "magnitude_type": "mb",
+        "place": "50 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:23.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0ye"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0yf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6562,
+          37.1479
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:39:59.811000+00:00",
+        "magnitude": 5.0,
+        "magnitude_type": "mb",
+        "place": "23 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:23.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yf"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0yg",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.5664,
+          37.8107
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:45:26.217000+00:00",
+        "magnitude": 5.1,
+        "magnitude_type": "mb",
+        "place": "73 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:38:23.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0yh",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.3728,
+          37.5516
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T09:49:15.275000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "54 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:24.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yh"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0yr",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.6625,
+          37.8468
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T10:06:54.649000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "64 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:38:24.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0yw",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2865,
+          37.5375
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T10:50:35.645000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mb",
+        "place": "48 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:24.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yw"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0z3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6946,
+          37.1664
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T11:35:32.459000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "19 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:25.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0z3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m0zf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.1399,
+          37.3826
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T13:10:57.324000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "26 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:26.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0zf"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m10e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.4761,
+          37.5711
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T17:33:30.185000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mwr",
+        "place": "63 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:30.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m10e"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m110",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6184,
+          37.0652
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T19:27:14.289000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mwr",
+        "place": "24 km NW of Hakui, Japan",
+        "updated_utc": "2024-03-09T21:38:32.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m110"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m113",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6924,
+          37.2247
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-01T19:42:06.006000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mwr",
+        "place": "18 km W of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:33.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m113"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m11s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9617,
+          37.3362
+        ]
+      },
+      "properties": {
+        "depth_km": 15.301,
+        "time_utc": "2024-01-01T22:13:30.239000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "12 km NNE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:34.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m11s"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m12f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7689,
+          37.247
+        ]
+      },
+      "properties": {
+        "depth_km": 6.0,
+        "time_utc": "2024-01-02T01:17:31.568000+00:00",
+        "magnitude": 5.4,
+        "magnitude_type": "mww",
+        "place": "11 km W of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:36.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m12f"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3ap",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.667,
+          32.3606
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-02T05:55:54.060000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-09T21:40:19.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3ap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m13h",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7831,
+          37.1828
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-02T06:57:54.621000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "11 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:40.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m13h"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m13q",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7367,
+          37.1175
+        ]
+      },
+      "properties": {
+        "depth_km": 7.453,
+        "time_utc": "2024-01-02T08:13:40.884000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mww",
+        "place": "19 km SW of Anamizu, Japan",
+        "updated_utc": "2024-03-12T19:21:57.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m13q"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m17v",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.3192,
+          37.4797
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-02T17:21:47.368000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mww",
+        "place": "46 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:46.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m17v"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1bj",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9204,
+          37.3466
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-03T01:54:34.243000+00:00",
+        "magnitude": 5.3,
+        "magnitude_type": "mww",
+        "place": "12 km N of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:53.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1bj"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1bt",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.559,
+          37.6257
+        ]
+      },
+      "properties": {
+        "depth_km": 15.237,
+        "time_utc": "2024-01-03T03:54:13.697000+00:00",
+        "magnitude": 4.9,
+        "magnitude_type": "mww",
+        "place": "70 km NNW of Itoigawa, Japan",
+        "updated_utc": "2024-03-09T21:38:55.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1bt"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1dz",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9172,
+          37.3248
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-03T09:48:00.219000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mww",
+        "place": "10 km N of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:38:59.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1dz"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1e1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.7952,
+          39.1672
+        ]
+      },
+      "properties": {
+        "depth_km": 39.683,
+        "time_utc": "2024-01-03T09:53:53.960000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "80 km ESE of Yamada, Japan",
+        "updated_utc": "2024-03-09T21:39:00.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1e1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1fl",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.1541,
+          37.4364
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-03T15:36:53.611000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mwr",
+        "place": "31 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:04.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1fl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1i6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.8096,
+          37.7958
+        ]
+      },
+      "properties": {
+        "depth_km": 5.972,
+        "time_utc": "2024-01-03T19:38:41.329000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mww",
+        "place": "54 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:39:06.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1i6"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1kb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.7438,
+          32.4482
+        ]
+      },
+      "properties": {
+        "depth_km": 22.311,
+        "time_utc": "2024-01-04T00:17:31.276000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-09T21:39:10.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1kb"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1lr",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.3572,
+          37.4636
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T06:46:47.423000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "47 km ENE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:15.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1lr"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3rh",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.4944,
+          31.4684
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T08:15:59.298000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-09T21:40:31.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3rh"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1m0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.456,
+          37.6914
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T08:16:22.946000+00:00",
+        "magnitude": 4.9,
+        "magnitude_type": "mww",
+        "place": "70 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:15.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1m0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1ri",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7241,
+          37.8102
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T12:30:38.558000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "60 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-09T21:39:19.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1ri"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1ry",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6402,
+          31.4856
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T13:59:08.875000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-09T21:39:21.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1ry"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m1s6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.0054,
+          37.1426
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-04T15:04:13.850000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "10 km NNE of Nanao, Japan",
+        "updated_utc": "2024-03-09T21:39:21.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1s6"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3xi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.7854,
+          32.3484
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-05T06:31:42.601000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-09T21:40:38.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3xi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m21w",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6794,
+          37.1756
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-05T16:59:08.446000+00:00",
+        "magnitude": 4.9,
+        "magnitude_type": "mb",
+        "place": "20 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:36.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m21w"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m22x",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8266,
+          37.2225
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-05T20:26:51.093000+00:00",
+        "magnitude": 5.1,
+        "magnitude_type": "mww",
+        "place": "6 km W of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:38.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m22x"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3yl",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.1473,
+          36.6225
+        ]
+      },
+      "properties": {
+        "depth_km": 51.484,
+        "time_utc": "2024-01-06T01:15:29.729000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "39 km ESE of Takahagi, Japan",
+        "updated_utc": "2025-09-14T12:19:13.365000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3yl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m27p",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6931,
+          37.1993
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-06T14:20:22.904000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "18 km WSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:46.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m27p"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m2b3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2619,
+          37.4611
+        ]
+      },
+      "properties": {
+        "depth_km": 6.086,
+        "time_utc": "2024-01-07T05:37:58.050000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mwr",
+        "place": "40 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:53.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2b3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m2b6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7566,
+          37.2146
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-07T06:26:56.123000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "12 km W of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:53.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2b6"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m2c0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8656,
+          37.1829
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-07T12:38:18.454000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mwr",
+        "place": "6 km SSW of Anamizu, Japan",
+        "updated_utc": "2024-03-09T21:39:57.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2c0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m2ny",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7814,
+          37.8629
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-09T08:59:10.141000+00:00",
+        "magnitude": 5.9,
+        "magnitude_type": "mww",
+        "place": "53 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-16T19:00:09.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2ny"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m2p4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7155,
+          37.8318
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-09T09:55:09.392000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "60 km WSW of Sado, Japan",
+        "updated_utc": "2024-03-16T19:00:09.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2p4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m4h7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.0567,
+          31.6351
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-11T09:40:48.388000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-16T19:00:59.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m4h7"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m36x",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.6389,
+          37.5826
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-11T20:54:28.326000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "63 km NNW of Itoigawa, Japan",
+        "updated_utc": "2024-03-16T19:00:21.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m36x"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m39a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2927,
+          37.4527
+        ]
+      },
+      "properties": {
+        "depth_km": 9.291,
+        "time_utc": "2024-01-12T08:29:08.884000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "42 km NE of Anamizu, Japan",
+        "updated_utc": "2024-03-16T19:00:26.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m39a"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3cb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.824,
+          32.2783
+        ]
+      },
+      "properties": {
+        "depth_km": 23.974,
+        "time_utc": "2024-01-12T15:58:02.250000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-16T19:00:30.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3cb"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3gz",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.2772,
+          43.6829
+        ]
+      },
+      "properties": {
+        "depth_km": 10.474,
+        "time_utc": "2024-01-13T06:55:59.969000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "20 km E of Honchō, Japan",
+        "updated_utc": "2024-03-16T19:00:33.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3gz"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us6000m3wx",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7977,
+          37.1307
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-16T09:42:16.421000+00:00",
+        "magnitude": 4.7,
+        "magnitude_type": "mwr",
+        "place": "14 km SW of Anamizu, Japan",
+        "updated_utc": "2024-03-29T17:37:51.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3wx"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000lt4j",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.896,
+          32.4784
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-23T04:30:58.404000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-30T22:32:40.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000lt4j"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000ltaz",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.0728,
+          42.4583
+        ]
+      },
+      "properties": {
+        "depth_km": 33.702,
+        "time_utc": "2024-01-23T21:33:49.499000+00:00",
+        "magnitude": 5.1,
+        "magnitude_type": "mww",
+        "place": "66 km SSE of Akkeshi, Japan",
+        "updated_utc": "2024-03-30T22:32:55.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltaz"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000ltmw",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7559,
+          43.2538
+        ]
+      },
+      "properties": {
+        "depth_km": 58.98,
+        "time_utc": "2024-01-25T04:29:48.696000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "16 km ESE of Nemuro, Japan",
+        "updated_utc": "2024-03-30T22:33:25.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltmw"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000lv12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7619,
+          31.4888
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-25T19:43:23.518000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "Izu Islands, Japan region",
+        "updated_utc": "2024-03-30T22:35:07.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000lv12"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000ltwg",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.8406,
+          37.1491
+        ]
+      },
+      "properties": {
+        "depth_km": 10.0,
+        "time_utc": "2024-01-26T05:40:04.386000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "10 km SSW of Anamizu, Japan",
+        "updated_utc": "2024-03-30T22:33:43.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltwg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000lufj",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.9558,
+          35.5331
+        ]
+      },
+      "properties": {
+        "depth_km": 70.051,
+        "time_utc": "2024-01-27T23:59:29.184000+00:00",
+        "magnitude": 5.1,
+        "magnitude_type": "mb",
+        "place": "11 km W of Ichihara, Japan",
+        "updated_utc": "2025-09-03T14:48:26.829000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000lufj"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000luqg",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.3464,
+          41.9718
+        ]
+      },
+      "properties": {
+        "depth_km": 64.566,
+        "time_utc": "2024-01-29T15:19:18.799000+00:00",
+        "magnitude": 4.5,
+        "magnitude_type": "mb",
+        "place": "40 km S of Shizunai-furukawachō, Japan",
+        "updated_utc": "2024-04-13T19:26:34.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000luqg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000lus7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.951,
+          38.454
+        ]
+      },
+      "properties": {
+        "depth_km": 436.91,
+        "time_utc": "2024-01-29T16:57:12.934000+00:00",
+        "magnitude": 4.6,
+        "magnitude_type": "mb",
+        "place": "272 km NNE of Ama, Japan",
+        "updated_utc": "2024-04-13T19:26:40.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000lus7"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000lutd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.2952,
+          35.3911
+        ]
+      },
+      "properties": {
+        "depth_km": 28.066,
+        "time_utc": "2024-01-29T20:03:05.077000+00:00",
+        "magnitude": 4.8,
+        "magnitude_type": "mb",
+        "place": "56 km SE of Hasaki, Japan",
+        "updated_utc": "2024-04-13T19:26:56.040000+00:00",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000lutd"
+      }
+    }
+  ]
+}

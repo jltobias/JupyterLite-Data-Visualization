@@ -10,6 +10,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "dist"
+COMPANIONS = sorted((ROOT / "content/repository_examples").glob("[0-9][0-9]_*.ipynb"))
 REMOVED_ARTWORK = "689c3f7c25eadff15c030ba2f32ac952f29285c4ec607206882ff120f688ac89"
 
 
@@ -42,7 +43,16 @@ def main():
         "index.html", "book/index.html", "book/intro.html", "lab/index.html",
         "ai-demo/index.html", "assets/visualization-splash.png", "build-info.json",
         "third-party-licenses/index.json", "files/visualization_methods_v2.ipynb",
+        "book/content/repository_examples/index.html", "files/repository_examples/repo_examples.py",
+        "files/repository_examples/data/manifest.json", "repository-examples/index.html",
+        "repository-examples/story.js", "repository-examples/story.css",
+        "repository-examples/scene-data.json", "repository-examples/events.csv",
+        "repository-examples/earthquake-handoff.geojson", "repository-examples/provenance.json",
     ]
+    assert len(COMPANIONS) == 9, "Expected nine companion notebooks"
+    for source in COMPANIONS:
+        expected.extend([f"files/repository_examples/{source.name}",
+                         f"book/content/repository_examples/{source.stem}.html"])
     for relative in expected:
         assert (SITE / relative).is_file(), f"Missing advertised destination: {relative}"
     # The real loader fetches index.html at both levels and reads this element.
@@ -51,7 +61,10 @@ def main():
         page = Links()
         page.feed((SITE / relative).read_text(encoding="utf-8"))
         assert isinstance(page.config, dict), f"Missing JupyterLite startup configuration in {relative}"
-    for page in [SITE / "index.html", SITE / "ai-demo/index.html"]:
+    linked_pages = [SITE / "index.html", SITE / "ai-demo/index.html", SITE / "repository-examples/index.html",
+                    SITE / "book/content/repository_examples/index.html"]
+    linked_pages.extend(SITE / f"book/content/repository_examples/{source.stem}.html" for source in COMPANIONS)
+    for page in linked_pages:
         links = Links()
         links.feed(page.read_text(encoding="utf-8"))
         for target in links.targets:
@@ -94,9 +107,35 @@ def main():
     catalog_links.feed(catalog.read_text(encoding="utf-8"))
     figure_sources = [s for s in catalog_links.targets if "_images/" in s or s.startswith("data:image/")]
     assert len(figure_sources) >= 90, "Catalog executed without the expected rendered figures"
+    for source in COMPANIONS:
+        published = SITE / "files/repository_examples" / source.name
+        assert json.loads(source.read_text(encoding="utf-8")) == json.loads(published.read_text(encoding="utf-8")), published
+        page = Links()
+        page.feed((SITE / f"book/content/repository_examples/{source.stem}.html").read_text(encoding="utf-8"))
+        figures = [s for s in page.targets if "_images/" in s or s.startswith("data:image/")]
+        assert len(figures) >= 3, f"Companion Book page lacks rendered figures: {source.name}"
+        for target in figures:
+            if not target.startswith("data:"):
+                assert ((SITE / "book/content/repository_examples") / unquote(urlsplit(target).path)).resolve().is_file(), target
+    packaged = SITE / "files/repository_examples/data"
+    index = json.loads((packaged / "manifest.json").read_text(encoding="utf-8"))
+    assert (packaged / "manifest.json").read_bytes() == (ROOT / "content/repository_examples/data/manifest.json").read_bytes()
+    for name, record in index["files"].items():
+        assert record["source"] in index["sources"], name
+        assert hashlib.sha256((packaged / name).read_bytes()).hexdigest() == record["sha256"], f"Published snapshot differs: {name}"
+    assert not (SITE / "files/repository_examples/exports").exists(), "Personal/generated exports entered Lite content"
+    assert not list((SITE / "files/repository_examples").glob(".data-*")), "Snapshot staging directory entered publication"
+    scene = SITE / "repository-examples"
+    provenance = json.loads((scene / "provenance.json").read_text(encoding="utf-8"))
+    assert hashlib.sha256((scene / "scene-data.json").read_bytes()).hexdigest() == provenance["scene_sha256"]
+    scene_html = (scene / "index.html").read_text(encoding="utf-8")
+    assert provenance["scene_sha256"] in scene_html and scene_html.count("<tr>") == 79, "Scene lacks its complete static table/checksum"
+    handoff = json.loads((scene / "earthquake-handoff.geojson").read_text(encoding="utf-8"))
+    assert len(handoff["features"]) == 78
+    assert all(len(f["geometry"]["coordinates"]) == 2 and "depth_km" in f["properties"] for f in handoff["features"]), "Depth was confused with GeoJSON altitude"
     notices = json.loads((SITE / "third-party-licenses/index.json").read_text(encoding="utf-8"))
     assert all(record["files"] for record in notices), "A distribution's license files were not exported"
-    print("Site checks passed: landing, book, lab, fresh notebook, splash, licenses, and no removed artwork.")
+    print("Site checks passed: landing, book, lab, fresh notebook, nine rendered companions, validated data, story/GIS routes, splash, licenses, and no removed artwork.")
 
 
 if __name__ == "__main__":

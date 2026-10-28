@@ -30,6 +30,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Install publishing dependencies
         run: |
           python -m pip install --upgrade pip
@@ -37,6 +42,15 @@ jobs:
 
       - name: Build and verify book, lab, and splash page
         run: python scripts/build_site.py
+
+      - name: Verify scene controls and fallbacks
+        run: node scripts/check_repository_scene.mjs
+
+      - name: Prepare pinned Pyodide verification runtime
+        run: python scripts/prepare_repository_pyodide.py --download
+
+      - name: Execute companions in fresh Pyodide processes
+        run: node scripts/check_repository_pyodide.mjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

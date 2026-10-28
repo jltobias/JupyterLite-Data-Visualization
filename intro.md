@@ -48,5 +48,11 @@ graphic is available through the source link in [References and attribution](ref
 
 The splash is original AI-generated conceptual cover art. Its map and underground
 scene are illustrative; they are not measured geographic or earthquake data.
-The larger open-data curriculum, maps, and storymap described in the draft
-project plan remain future work; this book publishes the existing catalog.
+Nine [repository-inspired companion lessons](content/repository_examples/index.md)
+now add small, dated real-data snapshots, a curated repository atlas and an
+original [earthquake story with 2D/3D controls](https://jltobias.github.io/JupyterLite-Data-Visualization/repository-examples/).
+They explore climate, sea level, historical cholera, hypothetical privacy
+perturbations, STAC metadata, earthquakes, CoralWatch and GIS handoffs. Each
+lesson includes visible code, interpretations, an exercise and attribution.
+The broader 100-method course and full GIS workspace integrations remain draft
+work.

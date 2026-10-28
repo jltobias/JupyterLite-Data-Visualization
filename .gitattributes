@@ -1,0 +1,5 @@
+# Evidence is hashed byte-for-byte; Git must not normalize downloaded CSV/JSON/notices.
+content/repository_examples/data/** -text -whitespace
+# The story's embedded checksum/provenance refer to these exact packaged bytes.
+static/repository-examples/scene-data.json -text
+static/repository-examples/events.csv -text -whitespace

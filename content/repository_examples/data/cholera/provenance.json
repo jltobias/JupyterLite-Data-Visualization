@@ -1,0 +1,14 @@
+{
+  "source_repository": "https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic",
+  "source_revision": "476f6dd5a8430e6eb823e79614fda1d7e12a78fb",
+  "retrieved_on": "2026-10-11",
+  "credit": "PHI-Case-Studies contributors, Jupyterlite-1854-Cholera-Basic; historical John Snow cholera teaching data",
+  "upstream_repository_license": "GPL-3.0; upstream LICENSE retained verbatim alongside these files",
+  "files": {
+    "cholera_deaths.csv": {"source_path": "contents/cholera_deaths.csv", "sha256": "1be1926dca480fe8c9a83b663e62758e57c7ebe6c296d6a32c5e93a50d62b40a", "rows": 250, "recorded_deaths": 489},
+    "pumps.csv": {"source_path": "contents/pumps.csv", "sha256": "6ad041659f2dc2abf9048aa4c08c01a9a7d181bd19684f76c74b7df7a4b4b830", "rows": 8},
+    "LICENSE": {"source_path": "LICENSE", "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"}
+  },
+  "transformations": "Source CSVs are unchanged. Derived maps use coordinates; DBSCAN gives every recorded location equal weight, without using DEATHS or pump locations. DEATHS is summed only for descriptive reporting.",
+  "limits": "Counts describe these files, not the entire outbreak. Original digitization and completeness have not been independently verified. No population denominators, individual water-use observations, dates of deaths, walking network, controls or causal labels are present. No upstream notebook code, images or video were copied."
+}

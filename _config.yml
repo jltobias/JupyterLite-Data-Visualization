@@ -10,7 +10,7 @@ exclude_patterns:
   - _bmad-output
   - "**/.ipynb_checkpoints"
 execute:
-  execute_notebooks: cache
+  execute_notebooks: force
   timeout: 180
   allow_errors: false
 repository:

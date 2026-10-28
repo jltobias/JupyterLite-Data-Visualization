@@ -1,0 +1,79 @@
+id,longitude,latitude,depth_km,time_utc,magnitude,magnitude_type,place,updated_utc,source_url
+us6000m0xj,137.2491,37.4933,10,2024-01-01T07:06:05.477000+00:00,5.8,mb,"42 km NE of Anamizu, Japan",2024-03-09T21:38:16.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xj
+us6000m0xl,137.271,37.4874,10,2024-01-01T07:10:09.476000+00:00,7.5,mww,"2024 Noto Peninsula, Japan Earthquake",2026-10-10T06:13:09.213000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xl
+us6000m0xm,136.8272,37.1895,10,2024-01-01T07:18:41.584000+00:00,6.2,mb,"8 km SW of Anamizu, Japan",2025-01-04T22:53:01.431000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xm
+us6000m34g,137.2254,37.3802,10,2024-01-01T07:27:28.747000+00:00,4.6,mb,"33 km ENE of Anamizu, Japan",2024-03-09T21:40:12.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m34g
+us6000m33l,136.8046,37.3496,10,2024-01-01T07:28:15.144000+00:00,4.6,mb,"15 km NNW of Anamizu, Japan",2024-03-09T21:40:05.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33l
+us6000m34h,137.2642,37.4638,10.997,2024-01-01T07:29:04.242000+00:00,4.7,mb,"41 km NE of Anamizu, Japan",2024-03-09T21:40:12.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m34h
+us6000m0xn,137.4519,37.4861,10,2024-01-01T07:39:49.268000+00:00,5.2,mb,"56 km ENE of Anamizu, Japan",2024-03-09T21:38:17.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xn
+us6000m33v,137.2483,37.4693,9.896,2024-01-01T07:42:43.430000+00:00,4.8,mb,"40 km NE of Anamizu, Japan",2024-03-09T21:40:07.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33v
+us6000m33u,137.7515,37.7823,4.785,2024-01-01T07:45:30.869000+00:00,4.7,mb,"59 km WSW of Sado, Japan",2024-03-09T21:40:07.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33u
+us6000m0xp,136.8374,37.2779,10,2024-01-01T07:48:14.335000+00:00,4.8,mb,"7 km NW of Anamizu, Japan",2024-03-09T21:38:18.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xp
+us6000m33m,137.5518,37.6242,8.243,2024-01-01T07:54:21.406000+00:00,4.7,mb,"70 km NNW of Itoigawa, Japan",2024-03-09T21:40:05.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33m
+us6000m0xt,136.8875,37.2997,10,2024-01-01T07:56:47.661000+00:00,5.6,mww,"7 km N of Anamizu, Japan",2024-03-09T21:38:18.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xt
+us6000m0xu,137.401,37.5444,10,2024-01-01T08:02:44.840000+00:00,5,mb,"56 km NE of Anamizu, Japan",2024-03-09T21:38:18.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xu
+us6000m0xw,136.6149,37.1718,10,2024-01-01T08:07:10.627000+00:00,5.1,mb,"26 km WSW of Anamizu, Japan",2024-03-09T21:38:19.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xw
+us6000m33y,137.3097,37.5918,9.216,2024-01-01T08:15:38.177000+00:00,4.5,mb,"53 km NE of Anamizu, Japan",2024-03-09T21:40:08.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m33y
+us6000m0xx,137.2009,37.5012,10,2024-01-01T08:17:46.634000+00:00,4.8,mb,"39 km NE of Anamizu, Japan",2024-03-09T21:38:19.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xx
+us6000m0xy,137.2239,37.4631,10,2024-01-01T08:22:10.846000+00:00,4.9,mb,"38 km NE of Anamizu, Japan",2024-03-09T21:38:19.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xy
+us6000m0y1,137.5274,37.5787,10,2024-01-01T08:29:02.262000+00:00,4.7,mb,"66 km NNW of Itoigawa, Japan",2024-03-09T21:38:20.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y1
+us6000m341,137.6044,37.6483,10,2024-01-01T08:42:04.871000+00:00,4.6,mb,"71 km NNW of Itoigawa, Japan",2024-03-09T21:40:09.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m341
+us6000m0y7,137.5542,37.8651,10,2024-01-01T08:48:21.162000+00:00,4.5,mb,"72 km WSW of Sado, Japan",2024-03-09T21:38:21.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y7
+us6000m0y9,137.4185,37.5339,10,2024-01-01T09:03:48.859000+00:00,5.5,mb,"56 km NE of Anamizu, Japan",2024-03-09T21:38:22.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0y9
+us6000m35b,137.4557,37.4672,10,2024-01-01T09:06:13.801000+00:00,4.6,mb,"55 km ENE of Anamizu, Japan",2024-03-09T21:40:16.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m35b
+us6000m0ya,137.4029,37.5146,10,2024-01-01T09:08:17.603000+00:00,5.6,mb,"54 km NE of Anamizu, Japan",2024-03-09T21:38:22.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0ya
+us6000m0ye,137.3585,37.4998,10,2024-01-01T09:30:21.401000+00:00,5.2,mb,"50 km NE of Anamizu, Japan",2024-03-09T21:38:23.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0ye
+us6000m0yf,136.6562,37.1479,10,2024-01-01T09:39:59.811000+00:00,5,mb,"23 km WSW of Anamizu, Japan",2024-03-09T21:38:23.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yf
+us6000m0yg,137.5664,37.8107,10,2024-01-01T09:45:26.217000+00:00,5.1,mb,"73 km WSW of Sado, Japan",2024-03-09T21:38:23.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yg
+us6000m0yh,137.3728,37.5516,10,2024-01-01T09:49:15.275000+00:00,4.6,mb,"54 km NE of Anamizu, Japan",2024-03-09T21:38:24.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yh
+us6000m0yr,137.6625,37.8468,10,2024-01-01T10:06:54.649000+00:00,4.6,mb,"64 km WSW of Sado, Japan",2024-03-09T21:38:24.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yr
+us6000m0yw,137.2865,37.5375,10,2024-01-01T10:50:35.645000+00:00,4.7,mb,"48 km NE of Anamizu, Japan",2024-03-09T21:38:24.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0yw
+us6000m0z3,136.6946,37.1664,10,2024-01-01T11:35:32.459000+00:00,4.6,mb,"19 km WSW of Anamizu, Japan",2024-03-09T21:38:25.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0z3
+us6000m0zf,137.1399,37.3826,10,2024-01-01T13:10:57.324000+00:00,4.5,mb,"26 km NE of Anamizu, Japan",2024-03-09T21:38:26.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0zf
+us6000m10e,137.4761,37.5711,10,2024-01-01T17:33:30.185000+00:00,4.6,mwr,"63 km NE of Anamizu, Japan",2024-03-09T21:38:30.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m10e
+us6000m110,136.6184,37.0652,10,2024-01-01T19:27:14.289000+00:00,4.5,mwr,"24 km NW of Hakui, Japan",2024-03-09T21:38:32.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m110
+us6000m113,136.6924,37.2247,10,2024-01-01T19:42:06.006000+00:00,4.6,mwr,"18 km W of Anamizu, Japan",2024-03-09T21:38:33.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m113
+us6000m11s,136.9617,37.3362,15.301,2024-01-01T22:13:30.239000+00:00,4.5,mb,"12 km NNE of Anamizu, Japan",2024-03-09T21:38:34.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m11s
+us6000m12f,136.7689,37.247,6,2024-01-02T01:17:31.568000+00:00,5.4,mww,"11 km W of Anamizu, Japan",2024-03-09T21:38:36.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m12f
+us6000m3ap,141.667,32.3606,10,2024-01-02T05:55:54.060000+00:00,4.5,mb,"Izu Islands, Japan region",2024-03-09T21:40:19.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3ap
+us6000m13h,136.7831,37.1828,10,2024-01-02T06:57:54.621000+00:00,4.8,mb,"11 km WSW of Anamizu, Japan",2024-03-09T21:38:40.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m13h
+us6000m13q,136.7367,37.1175,7.453,2024-01-02T08:13:40.884000+00:00,4.6,mww,"19 km SW of Anamizu, Japan",2024-03-12T19:21:57.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m13q
+us6000m17v,137.3192,37.4797,10,2024-01-02T17:21:47.368000+00:00,4.8,mww,"46 km NE of Anamizu, Japan",2024-03-09T21:38:46.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m17v
+us6000m1bj,136.9204,37.3466,10,2024-01-03T01:54:34.243000+00:00,5.3,mww,"12 km N of Anamizu, Japan",2024-03-09T21:38:53.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1bj
+us6000m1bt,137.559,37.6257,15.237,2024-01-03T03:54:13.697000+00:00,4.9,mww,"70 km NNW of Itoigawa, Japan",2024-03-09T21:38:55.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1bt
+us6000m1dz,136.9172,37.3248,10,2024-01-03T09:48:00.219000+00:00,4.7,mww,"10 km N of Anamizu, Japan",2024-03-09T21:38:59.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1dz
+us6000m1e1,142.7952,39.1672,39.683,2024-01-03T09:53:53.960000+00:00,4.5,mb,"80 km ESE of Yamada, Japan",2024-03-09T21:39:00.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1e1
+us6000m1fl,137.1541,37.4364,10,2024-01-03T15:36:53.611000+00:00,4.6,mwr,"31 km NE of Anamizu, Japan",2024-03-09T21:39:04.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1fl
+us6000m1i6,137.8096,37.7958,5.972,2024-01-03T19:38:41.329000+00:00,4.8,mww,"54 km WSW of Sado, Japan",2024-03-09T21:39:06.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1i6
+us6000m1kb,141.7438,32.4482,22.311,2024-01-04T00:17:31.276000+00:00,4.6,mb,"Izu Islands, Japan region",2024-03-09T21:39:10.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1kb
+us6000m1lr,137.3572,37.4636,10,2024-01-04T06:46:47.423000+00:00,4.5,mb,"47 km ENE of Anamizu, Japan",2024-03-09T21:39:15.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1lr
+us6000m3rh,139.4944,31.4684,10,2024-01-04T08:15:59.298000+00:00,4.8,mb,"Izu Islands, Japan region",2024-03-09T21:40:31.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3rh
+us6000m1m0,137.456,37.6914,10,2024-01-04T08:16:22.946000+00:00,4.9,mww,"70 km NE of Anamizu, Japan",2024-03-09T21:39:15.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1m0
+us6000m1ri,137.7241,37.8102,10,2024-01-04T12:30:38.558000+00:00,4.5,mb,"60 km WSW of Sado, Japan",2024-03-09T21:39:19.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1ri
+us6000m1ry,139.6402,31.4856,10,2024-01-04T13:59:08.875000+00:00,4.6,mb,"Izu Islands, Japan region",2024-03-09T21:39:21.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1ry
+us6000m1s6,137.0054,37.1426,10,2024-01-04T15:04:13.850000+00:00,4.6,mb,"10 km NNE of Nanao, Japan",2024-03-09T21:39:21.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m1s6
+us6000m3xi,141.7854,32.3484,10,2024-01-05T06:31:42.601000+00:00,4.6,mb,"Izu Islands, Japan region",2024-03-09T21:40:38.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3xi
+us6000m21w,136.6794,37.1756,10,2024-01-05T16:59:08.446000+00:00,4.9,mb,"20 km WSW of Anamizu, Japan",2024-03-09T21:39:36.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m21w
+us6000m22x,136.8266,37.2225,10,2024-01-05T20:26:51.093000+00:00,5.1,mww,"6 km W of Anamizu, Japan",2024-03-09T21:39:38.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m22x
+us6000m3yl,141.1473,36.6225,51.484,2024-01-06T01:15:29.729000+00:00,4.5,mb,"39 km ESE of Takahagi, Japan",2025-09-14T12:19:13.365000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3yl
+us6000m27p,136.6931,37.1993,10,2024-01-06T14:20:22.904000+00:00,4.5,mb,"18 km WSW of Anamizu, Japan",2024-03-09T21:39:46.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m27p
+us6000m2b3,137.2619,37.4611,6.086,2024-01-07T05:37:58.050000+00:00,4.5,mwr,"40 km NE of Anamizu, Japan",2024-03-09T21:39:53.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2b3
+us6000m2b6,136.7566,37.2146,10,2024-01-07T06:26:56.123000+00:00,4.8,mb,"12 km W of Anamizu, Japan",2024-03-09T21:39:53.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2b6
+us6000m2c0,136.8656,37.1829,10,2024-01-07T12:38:18.454000+00:00,4.5,mwr,"6 km SSW of Anamizu, Japan",2024-03-09T21:39:57.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2c0
+us6000m2ny,137.7814,37.8629,10,2024-01-09T08:59:10.141000+00:00,5.9,mww,"53 km WSW of Sado, Japan",2024-03-16T19:00:09.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2ny
+us6000m2p4,137.7155,37.8318,10,2024-01-09T09:55:09.392000+00:00,4.5,mb,"60 km WSW of Sado, Japan",2024-03-16T19:00:09.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2p4
+us6000m4h7,142.0567,31.6351,10,2024-01-11T09:40:48.388000+00:00,4.5,mb,"Izu Islands, Japan region",2024-03-16T19:00:59.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m4h7
+us6000m36x,137.6389,37.5826,10,2024-01-11T20:54:28.326000+00:00,4.5,mb,"63 km NNW of Itoigawa, Japan",2024-03-16T19:00:21.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m36x
+us6000m39a,137.2927,37.4527,9.291,2024-01-12T08:29:08.884000+00:00,4.5,mb,"42 km NE of Anamizu, Japan",2024-03-16T19:00:26.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m39a
+us6000m3cb,141.824,32.2783,23.974,2024-01-12T15:58:02.250000+00:00,4.6,mb,"Izu Islands, Japan region",2024-03-16T19:00:30.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3cb
+us6000m3gz,144.2772,43.6829,10.474,2024-01-13T06:55:59.969000+00:00,4.5,mb,"20 km E of Honchō, Japan",2024-03-16T19:00:33.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3gz
+us6000m3wx,136.7977,37.1307,10,2024-01-16T09:42:16.421000+00:00,4.7,mwr,"14 km SW of Anamizu, Japan",2024-03-29T17:37:51.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us6000m3wx
+us7000lt4j,141.896,32.4784,10,2024-01-23T04:30:58.404000+00:00,4.6,mb,"Izu Islands, Japan region",2024-03-30T22:32:40.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000lt4j
+us7000ltaz,145.0728,42.4583,33.702,2024-01-23T21:33:49.499000+00:00,5.1,mww,"66 km SSE of Akkeshi, Japan",2024-03-30T22:32:55.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltaz
+us7000ltmw,145.7559,43.2538,58.98,2024-01-25T04:29:48.696000+00:00,4.8,mb,"16 km ESE of Nemuro, Japan",2024-03-30T22:33:25.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltmw
+us7000lv12,139.7619,31.4888,10,2024-01-25T19:43:23.518000+00:00,4.5,mb,"Izu Islands, Japan region",2024-03-30T22:35:07.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000lv12
+us7000ltwg,136.8406,37.1491,10,2024-01-26T05:40:04.386000+00:00,4.5,mb,"10 km SSW of Anamizu, Japan",2024-03-30T22:33:43.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000ltwg
+us7000lufj,139.9558,35.5331,70.051,2024-01-27T23:59:29.184000+00:00,5.1,mb,"11 km W of Ichihara, Japan",2025-09-03T14:48:26.829000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000lufj
+us7000luqg,142.3464,41.9718,64.566,2024-01-29T15:19:18.799000+00:00,4.5,mb,"40 km S of Shizunai-furukawachō, Japan",2024-04-13T19:26:34.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000luqg
+us7000lus7,133.951,38.454,436.91,2024-01-29T16:57:12.934000+00:00,4.6,mb,"272 km NNE of Ama, Japan",2024-04-13T19:26:40.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000lus7
+us7000lutd,141.2952,35.3911,28.066,2024-01-29T20:03:05.077000+00:00,4.8,mb,"56 km SE of Hasaki, Japan",2024-04-13T19:26:56.040000+00:00,https://earthquake.usgs.gov/earthquakes/eventpage/us7000lutd

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Below the map · USGS earthquake evidence</title>
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+<header><a href="../">Data Visualization</a> / <a href="../book/content/repository_examples/index.html">Companion lessons</a></header>
+<main>
+  <p class="eyebrow">An original data story · USGS event catalog</p>
+  <h1>Below the map</h1>
+  <p class="lead">A map places an earthquake. Time reveals a sequence. Depth changes the picture. Inspect 78 recorded events selected near Japan in January 2024, then ask what each view leaves out.</p>
+  <div class="chapters" role="group" aria-label="Story chapters">
+    <button data-chapter="overview" aria-pressed="true">1 · Locate the selection</button>
+    <button data-chapter="sequence" aria-pressed="false">2 · Focus on the first days</button>
+    <button data-chapter="depth" aria-pressed="false">3 · Look below the surface</button>
+  </div>
+  <section class="story" aria-labelledby="chapter-title">
+    <div class="narrative"><h2 id="chapter-title">Locate the selection</h2><p id="chapter-text">The query selected magnitude ≥4.5 events between 30–46° N and 128–148° E, from January 1 inclusive to February 1 exclusive (UTC). These 78 epicenters are a bounded catalog selection. Overlap on a map does not establish a fault surface or predict another event.</p></div>
+    <div class="evidence"><strong>Evidence, before perspective</strong><p>Coordinates: longitude/latitude degrees. Depth: km, positive down. Times: UTC. Magnitudes retain their reported types. Retrieved SNAPSHOT_RETRIEVED_UTC.</p></div>
+  </section>
+  <section class="explorer" aria-label="Inspect the earthquake selection">
+    <div class="controls">
+      <label>View <select id="view"><option value="2d">2D epicenters</option><option value="3d">3D hypocenters · canvas</option><option value="deck">3D · optional deck.gl</option></select></label>
+      <label>Minimum magnitude <output id="magnitude-value">4.5</output><input id="magnitude" type="range" min="4.5" max="7.5" value="4.5" step="0.1"></label>
+      <label>Through January day (UTC) <output id="day-value">31</output><input id="day" type="range" min="1" max="31" value="31" step="1"></label>
+      <label>Vertical exaggeration <output id="exaggeration-value">1×</output><input id="exaggeration" type="range" min="1" max="6" value="1" step="0.5"></label>
+      <label>Azimuth <output id="azimuth-value">25°</output><input id="azimuth" type="range" min="0" max="360" value="25" step="5"></label>
+      <label>Tilt <output id="tilt-value">45°</output><input id="tilt" type="range" min="5" max="85" value="45" step="5"></label>
+      <button id="reset" type="button">Reset controls</button>
+    </div>
+    <div class="figure">
+      <p id="status" role="status">Loading local, checksum-validated scene data. The complete table and downloads below are available now.</p>
+      <canvas id="scene" width="1000" height="620" tabindex="0" aria-label="Earthquake plot. Click a point to inspect its event; use the table below for keyboard-accessible records."></canvas>
+      <div id="deck-scene" hidden aria-label="Optional deck.gl orbit scene"></div>
+      <p class="legend"><span class="gradient"></span> Color: depth, 0 → 600 km positive down. Canvas marker area follows a legibility rule based on magnitude; it is not energy or rupture area. Optional deck.gl uses fixed 5-pixel points.</p>
+      <p id="inspect" aria-live="polite">Select a point to inspect its ID, time, magnitude type, depth and source. The table contains the same records.</p>
+    </div>
+  </section>
+  <p class="technical">Canvas scene: x/y are a local equirectangular approximation in km, origin 138° E / 38° N, sphere radius 6371 km. z = −catalog depth × visible exaggeration. Rotation is a display transform; 2D ignores depth position. Distortion over this large region prevents precise distance work. No surface, terrain or fault model is implied.</p>
+  <p id="deck-note">The optional deck.gl 9.1.0 view loads its pinned browser distribution from jsDelivr only when selected. Its orthographic OrbitView fits the transformed full-source extent at the current exaggeration and viewport width; filtering alone does not change its camera. A network/WebGL failure returns a visible error; canvas, table and downloads remain available. Data fetch/body and optional script loading each time out after 15 seconds. <a href="https://deck.gl/docs/api-reference/core/orbit-view">OrbitView documentation</a> · <a href="https://github.com/visgl/deck.gl/blob/v9.1.0/LICENSE">deck.gl MIT license</a>. No native GIS package runs in this scene.</p>
+  <section aria-labelledby="downloads"><h2 id="downloads">Take the evidence with you</h2>
+    <p><a download href="events.csv">All 78 events · CSV</a> · <a download href="earthquake-handoff.geojson">GIS handoff · 2D GeoJSON</a> · <a download href="provenance.json">Query, terms and provenance</a> · <button id="filtered-download" type="button" disabled>Download filtered CSV</button></p>
+    <p>The GIS export uses WGS84 longitude then latitude, with <code>depth_km</code> as a named property. It never puts positive-down kilometers into a GeoJSON altitude coordinate. Native QGIS, RustGIS, GDAL, GeoAI or a JupyterGIS workspace are separate applications/runtimes; importing this handoff is an external continuation, not a tested integration claim.</p>
+  </section>
+  <section aria-labelledby="table-title"><h2 id="table-title">Complete event table · 78 records</h2><p>The initial table is rendered into this page and remains readable if JavaScript, loading or GPU resources fail. Controls filter it once local data load; reset restores all records.</p>
+    <div class="table-scroll"><table><caption>USGS January 2024 Japan query. Event IDs link to each USGS source. Depth km positive downward; magnitude types retained.</caption><thead><tr><th scope="col">ID / source</th><th scope="col">Time UTC</th><th scope="col">Longitude °E</th><th scope="col">Latitude °N</th><th scope="col">Depth km</th><th scope="col">Magnitude</th><th scope="col">Type</th><th scope="col">Place</th></tr></thead><tbody id="event-rows"><!-- EVENT_ROWS --></tbody></table></div>
+  </section>
+  <section><h2>What the story cannot establish</h2><p>This is a selected catalog of revised events with mixed reported magnitude types. It does not include every earthquake, uncertainty ellipses, a completeness model, rupture geometry, an aftershock classification or a forecast. Clusters and apparent alignments require additional seismological evidence. Perspective, occlusion and vertical exaggeration change perception; compare the table and 2D view before interpreting a pattern.</p>
+  <p>Credit: U.S. Geological Survey Earthquake Hazards Program. <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS format</a> · <a href="https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits">USGS credit and copyright guidance</a>. USGS-authored government products are generally public domain; third-party exclusions remain separate. Original story/code and project licensing remain undecided.</p></section>
+  <footer><a href="../book/content/repository_examples/07_usgs_earthquake_scenes.html">Read the earthquake lesson</a> · <a href="../lab/index.html?path=repository_examples/07_usgs_earthquake_scenes.ipynb">Run its notebook</a> · <a href="../book/content/repository_examples/09_storytelling_and_gis.html">GIS handoff lesson</a></footer>
+</main>
+<script id="scene-checksum" type="application/json">"SCENE_SHA256"</script>
+<script src="story.js"></script>
+</body></html>
