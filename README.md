@@ -4,6 +4,10 @@ This repository publishes a browser-runnable JupyterLite notebook demonstrating 
 
 Periodic Table of Visualization Methods:  https://www.visual-literacy.org/periodic_table/periodic_table.html
 
+Framework citation: Lengler, R., and Eppler, M. J. (2007). *Towards a Periodic Table of Visualization Methods for Management*. IASTED Conference on Graphics and Visualization in Engineering, Clearwater, Florida, USA. [Authors' publication page](https://www.visual-literacy.org/pages/documents.htm).
+
+The original table graphic is linked rather than reproduced. Its screenshot was removed from the notebook because permission to redistribute it could not be verified. See the [graphic reuse review](docs/periodic-table-reuse-evidence.md). Project licensing remains undecided; no reuse license for the authors' artwork is implied.
+
 Citation:  Oliveira, E.C., Oliveira, L.C., Cardoso, A. et al. Meta-model of information visualization based on Treemap. Univ Access Inf Soc 16, 903–912 (2017). https://doi.org/10.1007/s10209-016-0477-9   URL:  https://doi.org/10.1007/s10209-016-0477-9
 
 The notebook is prepared for the **Python (Pyodide)** kernel and uses Pyodide-compatible packages:

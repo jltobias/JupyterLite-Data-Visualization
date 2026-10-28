@@ -1,0 +1,30 @@
+[
+  {
+    "lens": "adversarial",
+    "location": "Original notebook: cell 1",
+    "trigger_condition": "The repository distributes the complete screenshot without a documented applicable reuse basis.",
+    "guard_snippet": "Document an applicable reuse basis and scope, or remove the copy and link to the original.",
+    "potential_consequence": "The repository and course could redistribute artwork whose reuse permission remains unverified; this is not proof of infringement or refusal."
+  },
+  {
+    "lens": "adversarial",
+    "location": "Original README introduction and notebook cell 1",
+    "trigger_condition": "Readable authorship, version, foundational citation, and reuse status are missing beside the screenshot and in the README.",
+    "guard_snippet": "Provide authors, version 1.5, citation, source link, and an accurate reuse-status statement.",
+    "potential_consequence": "Readers could confuse the unrelated treemap citation or repository authorship with the graphic's provenance and rights."
+  },
+  {
+    "lens": "adversarial",
+    "location": "Initial reuse evidence: scope and disposition",
+    "trigger_condition": "The disposition emphasizes future publication even though the public source repository already contains the screenshot.",
+    "guard_snippet": "Distinguish existing public distribution from future publication and record the limits of local removal.",
+    "potential_consequence": "The maintainer could overlook earlier copies already distributed through the repository."
+  },
+  {
+    "lens": "adversarial",
+    "location": "Initial reuse evidence: rights questions",
+    "trigger_condition": "The statement that attribution must accompany any permitted use presents a universal legal condition without an identified grant.",
+    "guard_snippet": "Distinguish scholarly attribution policy from the notices and credits required by the applicable reuse basis.",
+    "potential_consequence": "The report could conflate a project policy with an as-yet-unidentified license's conditions."
+  }
+]

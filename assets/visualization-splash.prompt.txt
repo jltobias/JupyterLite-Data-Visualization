@@ -1,0 +1,11 @@
+Generation: built-in image_gen tool, 2026-10-28
+Output: visualization-splash.png, 2172 x 724 pixels, RGB
+Purpose: conceptual course cover, not scientific evidence
+
+Use case: scientific-educational
+Asset type: wide splash banner for a Jupyter Book and JupyterLite open-data visualization course, 3:1 landscape composition.
+Primary request: a polished editorial scientific illustration connecting a periodic-table-inspired collection of visualization tiles to evidence about the world: a globe, a two-dimensional world map, a three-dimensional subsurface earthquake point-cloud scene, and small line, bar, scatter, and network motifs.
+Style/medium: sophisticated clean dimensional illustration, restrained details, crisp forms, subtle paper texture and luminous data accents. Navy background with teal, cyan, warm amber and ivory.
+Composition/framing: title readable at small README size on the left, illustrations on the right flowing from flat chart tiles into a globe and subsurface scene. Generous padding, no clipped elements.
+Text (verbatim): "DATA VISUALIZATION" as the main title. Smaller subtitle "Explore. Explain. Understand."
+Constraints: this is conceptual cover art, not a quantitative chart or a reproduction of the original Periodic Table of Visualization Methods. Use original unlabeled illustrative tiles, no logos, no official seals, no flags, no author names, no watermark. Do not invent geographic data claims or numeric scales. Keep the title exactly as supplied.
