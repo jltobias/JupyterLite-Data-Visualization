@@ -1,0 +1,2613 @@
+{
+  "schema_version": 1,
+  "prepared": "2026-10-28",
+  "status": "design_only",
+  "framework": {
+    "authors": [
+      "Ralph Lengler",
+      "Martin J. Eppler"
+    ],
+    "year": 2007,
+    "title": "Towards a Periodic Table of Visualization Methods for Management",
+    "source_url": "https://www.visual-literacy.org/periodic_table/periodic_table.html",
+    "method_inventory": "100 distinct method labels; legends excluded; spelling normalized",
+    "artwork": "Not copied; no redistribution permission established"
+  },
+  "family_counts": {
+    "Data visualization": 11,
+    "Information visualization": 18,
+    "Concept visualization": 28,
+    "Metaphor visualization": 9,
+    "Compound visualization": 6,
+    "Strategy visualization": 28
+  },
+  "evidence_kinds": {
+    "observations": "Records or measurements supplied by the provider",
+    "model_estimates": "Provider-produced survey/model estimates, retaining uncertainty",
+    "derived_summary": "Reproducible calculation from cited source data",
+    "documented_structure": "Relationships/definitions grounded in public source documentation",
+    "documented_workflow": "Explicitly implemented data-processing workflow using real inputs",
+    "scenario": "Teaching assumptions anchored to source evidence; no claim of measured outcomes"
+  },
+  "elements": [
+    {
+      "id": "DV01",
+      "family": "Data visualization",
+      "method": "Continuum",
+      "publisher_label": "continuum",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How does PM2.5 vary along a concentration scale?",
+      "proposed_output": "A continuous scale with station positions, units, missingness, and a sorted dot-plot comparison.",
+      "learner_activity": "Change the time window and compare rankings with uncertainty.",
+      "limitation": "A color scale is not a measured risk threshold; use an explicit published threshold only when its source is given.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 1,
+          "family": "Data visualization",
+          "method": "Continuum"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV02",
+      "family": "Data visualization",
+      "method": "Cartesian coordinates",
+      "publisher_label": "cartesian coordinates",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "observations",
+      "question": "Where did the selected earthquakes occur in geographic and projected coordinates?",
+      "proposed_output": "Longitude-latitude scatter and a local projected distance plot with a coastline context.",
+      "learner_activity": "Compare angular and kilometer distances for two events.",
+      "limitation": "Degrees are not uniform distance; declare CRS, axis order, and projection distortion.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 2,
+          "family": "Data visualization",
+          "method": "Cartesian coordinates"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV03",
+      "family": "Data visualization",
+      "method": "Table",
+      "publisher_label": "table",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "Which counties have high estimated disease burden and uncertain socioeconomic estimates?",
+      "proposed_output": "A joined table with GEOIDs, units, source years, intervals, and accessible formatting.",
+      "learner_activity": "Audit an unmatched county and compare a sorted table with its chart.",
+      "limitation": "Keep ACS 90% margins distinct from PLACES 95% intervals; install/import jinja2 explicitly if using Styler.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 3,
+          "family": "Data visualization",
+          "method": "Table"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV04",
+      "family": "Data visualization",
+      "method": "Pie chart",
+      "publisher_label": "pie chart",
+      "sources": [
+        "acs"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "What is the age composition of one county?",
+      "proposed_output": "A labeled age-share pie beside a 100% stacked bar using mutually exclusive age bins.",
+      "learner_activity": "Change the county and explain which representation makes small differences clearer.",
+      "limitation": "Use a common denominator and exhaustive bins; do not mix overlapping categories.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 4,
+          "family": "Data visualization",
+          "method": "Pie chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV05",
+      "family": "Data visualization",
+      "method": "Line chart",
+      "publisher_label": "line chart",
+      "sources": [
+        "noaa_co2"
+      ],
+      "evidence_kind": "observations",
+      "question": "How do the CO2 trend and seasonal cycle differ?",
+      "proposed_output": "Monthly series with flagged gaps, trend, and a separate detrended panel.",
+      "learner_activity": "Compare endpoint changes over two complete windows.",
+      "limitation": "Connect only valid consecutive observations; changing the window changes the apparent trend.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 5,
+          "family": "Data visualization",
+          "method": "Line chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV06",
+      "family": "Data visualization",
+      "method": "Bar chart",
+      "publisher_label": "bar chart",
+      "sources": [
+        "hrsa",
+        "acs"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How do facility counts and sites per population differ across counties?",
+      "proposed_output": "Sorted counts and per-100,000 rates with labeled denominators and data dates.",
+      "learner_activity": "Find a county whose ranking reverses after normalization.",
+      "limitation": "Sites are not capacity; misaligned dates and small denominators affect rates.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 6,
+          "family": "Data visualization",
+          "method": "Bar chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV07",
+      "family": "Data visualization",
+      "method": "Histogram",
+      "publisher_label": "histogram",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "observations",
+      "question": "What does the regional earthquake depth distribution look like?",
+      "proposed_output": "Count histogram, ECDF, and alternative depth bins.",
+      "learner_activity": "Change bin width and compare shallow/deep proportions.",
+      "limitation": "Catalog selection, magnitude threshold, and depth uncertainty affect the distribution.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 7,
+          "family": "Data visualization",
+          "method": "Histogram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV08",
+      "family": "Data visualization",
+      "method": "Area chart",
+      "publisher_label": "area chart",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How does the distribution of recorded AQI days change across years?",
+      "proposed_output": "Stacked annual day counts and a separate share view with missing days explicit.",
+      "learner_activity": "Compare one complete year with an incomplete year and defend the denominator.",
+      "limitation": "AQI categories apply to recorded days; do not turn unobserved days into good-air days.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 8,
+          "family": "Data visualization",
+          "method": "Area chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV09",
+      "family": "Data visualization",
+      "method": "Scatterplot",
+      "publisher_label": "scatterplot",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "How are county poverty estimates associated with modeled diabetes prevalence?",
+      "proposed_output": "Labeled scatter, uncertainty annotations, and sensitivity to population weighting.",
+      "learner_activity": "Compare crude and age-adjusted measures and discuss the changed pattern.",
+      "limitation": "Ecological association is not individual risk or causation; align geography and years.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 9,
+          "family": "Data visualization",
+          "method": "Scatterplot"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV10",
+      "family": "Data visualization",
+      "method": "Tukey box plot",
+      "publisher_label": "tukey box plot",
+      "sources": [
+        "noaa_weather"
+      ],
+      "evidence_kind": "observations",
+      "question": "How do daily temperature distributions vary by season and station?",
+      "proposed_output": "Seasonal Tukey boxes with sample counts, points, and missingness panel.",
+      "learner_activity": "Inspect a flagged extreme before deciding whether to exclude it.",
+      "limitation": "Whiskers are not confidence intervals; spell out the outlier convention and units.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 10,
+          "family": "Data visualization",
+          "method": "Tukey box plot"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "DV11",
+      "family": "Data visualization",
+      "method": "Spectrogram",
+      "publisher_label": "spectogram",
+      "sources": [
+        "noaa_co2"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How persistent is the annual cycle in monthly CO2 observations?",
+      "proposed_output": "Detrended series, windowed spectrogram with periods in months, and a seasonal comparison.",
+      "learner_activity": "Change the analysis window and explain the resolution tradeoff.",
+      "limitation": "Monthly sampling limits frequencies; handle gaps and trend leakage without inventing observations.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 11,
+          "family": "Data visualization",
+          "method": "Spectrogram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV01",
+      "family": "Information visualization",
+      "method": "Radar chart / cobweb",
+      "publisher_label": "radar chart / cobweb",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "How do selected counties compare across several health and social indicators?",
+      "proposed_output": "Normalized radar profiles beside a dot-plot panel with raw units and denominators.",
+      "learner_activity": "Reverse an axis order and test whether the visual conclusion survives.",
+      "limitation": "Area depends on axis order and normalization; no unsupported composite health score.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 13,
+          "family": "Information visualization",
+          "method": "Radar chart cobweb"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV02",
+      "family": "Information visualization",
+      "method": "Parallel coordinates",
+      "publisher_label": "parallel coordinates",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "Which county profiles combine chronic disease, poverty, and air-quality differences?",
+      "proposed_output": "Brushed parallel coordinates with explicit scaling, missing-value handling, and selected county table.",
+      "learner_activity": "Compare robust scaling with min-max scaling and inspect a selected profile.",
+      "limitation": "Mixed units and missing monitors can dominate patterns; profiles are not individual records.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 15,
+          "family": "Information visualization",
+          "method": "Parallel coordinates"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV03",
+      "family": "Information visualization",
+      "method": "Hyperbolic tree",
+      "publisher_label": "hyperbolic tree",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How can users explore a large state-county-facility hierarchy?",
+      "proposed_output": "A real hyperbolic focus/context tree of public facility records and an accessible expandable tree.",
+      "learner_activity": "Follow a selected site through both views and record which context is preserved.",
+      "limitation": "Implement hyperbolic layout explicitly; an ordinary radial tree must not be called hyperbolic.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 18,
+          "family": "Information visualization",
+          "method": "Hyperbolic tree"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV04",
+      "family": "Information visualization",
+      "method": "Cycle diagram",
+      "publisher_label": "cycle diagram",
+      "sources": [
+        "noaa_co2"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How does the annual CO2 seasonal cycle repeat?",
+      "proposed_output": "Month-of-year cycle with multi-year spread and an adjacent chronological plot.",
+      "learner_activity": "Compare two periods and identify which feature a cycle hides.",
+      "limitation": "Wrapping months suppresses long-term change; retain dates and sample counts.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 21,
+          "family": "Information visualization",
+          "method": "Cycle diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV05",
+      "family": "Information visualization",
+      "method": "Timeline",
+      "publisher_label": "timeline",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "observations",
+      "question": "When did earthquakes occur within a fixed regional sequence?",
+      "proposed_output": "Event timeline with magnitude symbols, selected-event details, and daily counts.",
+      "learner_activity": "Change the magnitude cutoff and explain changes in apparent clustering.",
+      "limitation": "Catalog thresholds affect apparent activity; occurrence patterns do not forecast the next event.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 12,
+          "family": "Information visualization",
+          "method": "Timeline"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV06",
+      "family": "Information visualization",
+      "method": "Venn / Euler diagram",
+      "publisher_label": "venn / euler diagram",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "Which counties meet three explicitly defined screening criteria?",
+      "proposed_output": "Exact set-intersection table, Euler/Venn view, and an UpSet-style comparison.",
+      "learner_activity": "Vary a cutoff and identify counties that change membership.",
+      "limitation": "Cutoffs are teaching assumptions, missing values are separate, and areas must not imply inaccurate counts.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 27,
+          "family": "Information visualization",
+          "method": "Venn/Euler diagram"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV07",
+      "family": "Information visualization",
+      "method": "Sankey diagram",
+      "publisher_label": "sankey diagram",
+      "sources": [
+        "acs"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "How are people distributed across age and poverty-status categories?",
+      "proposed_output": "A Sankey built from a published cross-tabulation plus its source table and balance checks.",
+      "learner_activity": "Verify every incoming and outgoing total and compare a stacked bar.",
+      "limitation": "Never fabricate joint distributions from unrelated marginal totals; this is composition, not individual movement.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 24,
+          "family": "Information visualization",
+          "method": "Sankey diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV08",
+      "family": "Information visualization",
+      "method": "Information lens",
+      "publisher_label": "information lense",
+      "sources": [
+        "places",
+        "acs"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "How can a reader magnify uncertain county estimates without losing national context?",
+      "proposed_output": "Focus-and-context table lens with highlighted estimate/interval columns and a full table alternative.",
+      "learner_activity": "Change the focus county and trace a value through both representations.",
+      "limitation": "A lens changes display scale, not the underlying value; preserve consistent labels and accessible navigation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV09",
+      "family": "Information visualization",
+      "method": "Entity relationship diagram",
+      "publisher_label": "entity relationship diagram",
+      "sources": [
+        "acs",
+        "places",
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How should county, release, indicator, and facility tables join?",
+      "proposed_output": "An ER diagram with keys, cardinalities, vintage fields, and tested example joins.",
+      "learner_activity": "Introduce a duplicate GEOID-release pair and show the failed validation.",
+      "limitation": "A many-to-many join can multiply counts; identifiers and geography vintages require explicit constraints.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 19,
+          "family": "Information visualization",
+          "method": "Entity relationship diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV10",
+      "family": "Information visualization",
+      "method": "Petri net",
+      "publisher_label": "petri net",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How do imagery download, quality checks, and approvals synchronize?",
+      "proposed_output": "A token-based Petri net for the documented imagery workflow with transitions and simulated execution log.",
+      "learner_activity": "Block a cloud-quality gate and find the unreachable publication state.",
+      "limitation": "Tokens and durations are a teaching model, not observed agency operations; demonstrate actual firing semantics.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV11",
+      "family": "Information visualization",
+      "method": "Flow chart",
+      "publisher_label": "flow chart",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "How should a daily air-quality record pass validation?",
+      "proposed_output": "Executable quality-control branches paired with the EPA field definitions and a record audit table.",
+      "learner_activity": "Trace a missing, flagged, and valid observation through the decisions.",
+      "limitation": "A quality flag is not permission to discard data silently; preserve reasons and source records.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 26,
+          "family": "Information visualization",
+          "method": "Flow chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV12",
+      "family": "Information visualization",
+      "method": "Clustering",
+      "publisher_label": "clustering",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "Which counties have similar measured indicator profiles?",
+      "proposed_output": "Scaled clustering with cluster profiles, distances, and a linked map.",
+      "learner_activity": "Change feature scaling or cluster count and compare stability.",
+      "limitation": "Clusters are analyst choices; avoid stigmatizing labels and causal interpretations.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 28,
+          "family": "Information visualization",
+          "method": "Clustering"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV13",
+      "family": "Information visualization",
+      "method": "Data map",
+      "publisher_label": "data map",
+      "sources": [
+        "acs",
+        "places",
+        "natural_earth"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "How do county disease estimates vary when boundaries and denominators are respected?",
+      "proposed_output": "County choropleth, proportional-symbol comparison, legend, intervals, and unmatched-geography table.",
+      "learner_activity": "Compare equal-interval and quantile classes and document changed impressions.",
+      "limitation": "Use a licensed Census county geometry source; area is not population and absent values are not zero.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV14",
+      "family": "Information visualization",
+      "method": "Treemap",
+      "publisher_label": "treemap",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How are public health-center sites distributed through state and county hierarchies?",
+      "proposed_output": "Nested area-proportional treemap with count labels and a ranked table.",
+      "learner_activity": "Check area proportionality and compare a small county with the table.",
+      "limitation": "Declare the grouping and count unit; site counts do not measure service capacity.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 17,
+          "family": "Information visualization",
+          "method": "Treemaps"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV15",
+      "family": "Information visualization",
+      "method": "Cone-tree diagram",
+      "publisher_label": "cone-tree diagram",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Does a 3D hierarchy help explore state-county-site organization?",
+      "proposed_output": "A rotatable cone-tree scene with depth legend and a 2D expandable-tree fallback.",
+      "learner_activity": "Locate a site and compare occlusion and navigation effort in both views.",
+      "limitation": "A cone tree requires its actual 3D hierarchical layout; display depth is not geographic elevation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV16",
+      "family": "Information visualization",
+      "method": "System dynamics / simulation",
+      "publisher_label": "system dynamics / simulation",
+      "sources": [
+        "worldpop",
+        "healthsites"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might population, service capacity, and queues interact over time?",
+      "proposed_output": "Stock-flow equations, time-series simulation, and sensitivity plots using real population/site context.",
+      "learner_activity": "Change capacity and delay assumptions and compare trajectories.",
+      "limitation": "Rates, capacity, queues, and causal links are explicit assumptions; results are not calibrated forecasts.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 29,
+          "family": "Information visualization",
+          "method": "System dynamics loop diagram"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV17",
+      "family": "Information visualization",
+      "method": "Data flow diagram",
+      "publisher_label": "data flow diagram",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "Where do data change as county indicators become a dashboard?",
+      "proposed_output": "A process/store/external-entity DFD linked to input hashes, joins, and output summaries.",
+      "learner_activity": "Trace one plotted value back through its transformations.",
+      "limitation": "Use DFD semantics rather than a generic flow chart; data lineage does not establish analytical validity.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "IV18",
+      "family": "Information visualization",
+      "method": "Semantic network",
+      "publisher_label": "semantic network",
+      "sources": [
+        "places",
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How are indicator concepts, geography, and services related in public metadata?",
+      "proposed_output": "A typed graph of definitions and source-backed relationships with a searchable edge table.",
+      "learner_activity": "Challenge an edge and locate the exact supporting definition.",
+      "limitation": "Distinguish semantic, statistical, and causal relations; graph proximity is not scientific evidence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 23,
+          "family": "Information visualization",
+          "method": "Semantic network"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV01",
+      "family": "Concept visualization",
+      "method": "Meeting trace",
+      "publisher_label": "meeting trace",
+      "sources": [
+        "hrsa",
+        "acs"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can a team retain evidence and unresolved decisions during a facility-access discussion?",
+      "proposed_output": "A timestamped simulated meeting trace linking each claim to an evidence card and decision log.",
+      "learner_activity": "Reconstruct which assumption changed a proposed priority.",
+      "limitation": "The meeting is authored teaching material; do not imply real participants made these statements.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 44,
+          "family": "Metaphor visualization",
+          "method": "Meeting trace"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV02",
+      "family": "Concept visualization",
+      "method": "Communication diagram",
+      "publisher_label": "communication diagram",
+      "sources": [
+        "epa",
+        "hrsa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "Who exchanges what information during a public-data refresh?",
+      "proposed_output": "Actors, numbered messages, data contracts, and a trace for one downloaded file.",
+      "learner_activity": "Add a failed-source response and trace its notification path.",
+      "limitation": "Model information exchange, not surveillance or undocumented agency reporting relationships.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 45,
+          "family": "Metaphor visualization",
+          "method": "Communication diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV03",
+      "family": "Concept visualization",
+      "method": "Flight plan",
+      "publisher_label": "flight plan",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What is a defensible route from earthquake data to an explanatory story?",
+      "proposed_output": "A mission-style plan with checkpoints, evidence gates, outputs, and a small observed event summary.",
+      "learner_activity": "Change the target audience and revise the checkpoints.",
+      "limitation": "Dates and effort are planning assumptions, not actual response operations.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 49,
+          "family": "Metaphor visualization",
+          "method": "Flight plan"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV04",
+      "family": "Concept visualization",
+      "method": "Concept skeleton",
+      "publisher_label": "concept skeleton",
+      "sources": [
+        "worldpop",
+        "healthsites"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Which core ideas are required to interpret a population-access map?",
+      "proposed_output": "A sparse prerequisite skeleton expanded into definitions and examples from the data dictionary.",
+      "learner_activity": "Identify a missing prerequisite and show the misunderstanding it prevents.",
+      "limitation": "Do not turn a metaphor into an anatomical or causal claim; label the abstraction.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 43,
+          "family": "Metaphor visualization",
+          "method": "Concept skeleton"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV05",
+      "family": "Concept visualization",
+      "method": "Mind map",
+      "publisher_label": "mindmap",
+      "sources": [
+        "nasa_power",
+        "noaa_weather",
+        "places"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "What questions connect climate conditions and health indicators?",
+      "proposed_output": "An expandable mind map with source-linked branches and a comparison to a concept map.",
+      "learner_activity": "Add a question that would require data the course does not contain.",
+      "limitation": "Free association is not a demonstrated relationship; distinguish hypotheses from measured variables.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 30,
+          "family": "Concept visualization",
+          "method": "Mindmap"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV06",
+      "family": "Concept visualization",
+      "method": "Square of oppositions",
+      "publisher_label": "square of oppositions",
+      "sources": [
+        "healthsites"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How do universal and particular claims differ when facility metadata are incomplete?",
+      "proposed_output": "A logical square using carefully defined predicates and a supporting missingness table.",
+      "learner_activity": "Test the claims on an empty subset and explain existential assumptions.",
+      "limitation": "Modern logic does not support all traditional square relations without existential import; unknown is not false.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 33,
+          "family": "Concept visualization",
+          "method": "Square of oppositions"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV07",
+      "family": "Concept visualization",
+      "method": "Concentric circles",
+      "publisher_label": "concentric circles",
+      "sources": [
+        "healthsites",
+        "worldpop"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How does estimated population vary in distance bands around a facility?",
+      "proposed_output": "True spatial rings with population summaries and a non-map band chart.",
+      "learner_activity": "Change radius and compare overlap-aware totals.",
+      "limitation": "Use a suitable projected CRS and avoid double counting overlaps; rings do not model roads or travel time.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 36,
+          "family": "Concept visualization",
+          "method": "Concentric circles"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV08",
+      "family": "Concept visualization",
+      "method": "Argument slide",
+      "publisher_label": "argument slide",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "What evidence supports a cautious statement about unequal chronic-disease burden?",
+      "proposed_output": "One evidence-led slide with headline, chart, source, counterpoint, and uncertainty statement.",
+      "learner_activity": "Rewrite an overclaimed headline to match the data.",
+      "limitation": "County estimates support descriptive comparison, not a claim about causes or individual patients.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 39,
+          "family": "Concept visualization",
+          "method": "Argument slide"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV09",
+      "family": "Concept visualization",
+      "method": "Swim lane diagram",
+      "publisher_label": "swim lane diagram",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which roles own imagery selection, processing, validation, and publication?",
+      "proposed_output": "Role-based lanes with artifacts, quality gates, and a worked data-item example.",
+      "learner_activity": "Move a failed cloud-mask result through the correct return path.",
+      "limitation": "Roles are an illustrative course workflow, not a representation of an actual agency's organization.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 57,
+          "family": "Metaphor visualization",
+          "method": "Swim lane diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV10",
+      "family": "Concept visualization",
+      "method": "Gantt chart",
+      "publisher_label": "gantt chart",
+      "sources": [
+        "epa",
+        "places"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How would a small team schedule a reproducible county-health analysis?",
+      "proposed_output": "Tasks linked to real source requirements, dependencies, scenario durations, and milestones.",
+      "learner_activity": "Delay a data-quality task and update the completion date.",
+      "limitation": "Durations are assumed; a visually overlapping bar does not establish a dependency.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 50,
+          "family": "Metaphor visualization",
+          "method": "Gantt chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV11",
+      "family": "Concept visualization",
+      "method": "Perspectives diagram",
+      "publisher_label": "perspectives diagram",
+      "sources": [
+        "hrsa",
+        "acs",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might residents, analysts, and service planners read the same access evidence differently?",
+      "proposed_output": "A source-annotated perspective matrix with common facts and distinct hypothetical concerns.",
+      "learner_activity": "Identify a perspective missing from the initial design.",
+      "limitation": "Do not assign real communities unelicited beliefs; prompts are provisional and invite local input.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 55,
+          "family": "Metaphor visualization",
+          "method": "Perspectives diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV12",
+      "family": "Concept visualization",
+      "method": "Dilemma diagram",
+      "publisher_label": "dilemma diagram",
+      "sources": [
+        "healthsites",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How should a public map balance detail with the risk of misinterpretation?",
+      "proposed_output": "Competing options, benefits, harms, evidence gaps, and an aggregation demonstration.",
+      "learner_activity": "Compare two publication scales and justify a revision.",
+      "limitation": "Public facility points and sensitive patient locations are different data classes; no patient mapping is required.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 60,
+          "family": "Metaphor visualization",
+          "method": "Dilemma diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV13",
+      "family": "Concept visualization",
+      "method": "Layer chart",
+      "publisher_label": "layer chart",
+      "sources": [
+        "worldpop",
+        "healthsites",
+        "sentinel"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "What belongs in the data, analysis, and communication layers of an access story?",
+      "proposed_output": "An annotated layer stack with real sample outputs and lineage between layers.",
+      "learner_activity": "Remove one layer and identify which claim becomes unsupported.",
+      "limitation": "A display layer is not an independent line of evidence; clarify CRS and resolution at each stage.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 31,
+          "family": "Concept visualization",
+          "method": "Layer chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV14",
+      "family": "Concept visualization",
+      "method": "Minto pyramid technique",
+      "publisher_label": "minto pyramid technique",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How can a reader move from an air-quality conclusion to supporting evidence?",
+      "proposed_output": "A conclusion-evidence pyramid with labeled annual/day-level summaries and a counterexample.",
+      "learner_activity": "Rebuild the pyramid after finding incomplete monitoring coverage.",
+      "limitation": "The hierarchy organizes an argument; it does not replace uncertainty or prove causality.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 34,
+          "family": "Concept visualization",
+          "method": "Minto pyramid technique"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV15",
+      "family": "Concept visualization",
+      "method": "Cause-effect chains",
+      "publisher_label": "cause effect chains",
+      "sources": [
+        "nasa_power",
+        "places"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which proposed links between heat and health are measured, assumed, or absent?",
+      "proposed_output": "A typed causal-hypothesis chain beside observed climate summaries and an evidence-gap table.",
+      "learner_activity": "Identify a confounder and show why the available data cannot estimate the effect.",
+      "limitation": "Association and mechanisms need different evidence; do not infer causal effects from unmatched datasets.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 37,
+          "family": "Concept visualization",
+          "method": "Cause-effect chains"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV16",
+      "family": "Concept visualization",
+      "method": "Toulmin map",
+      "publisher_label": "toulmin map",
+      "sources": [
+        "epa",
+        "acs"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "What warrants and qualifications connect an air-quality chart to a public claim?",
+      "proposed_output": "A claim-data-warrant-backing-rebuttal map with explicit source references.",
+      "learner_activity": "Construct a rebuttal based on monitor coverage or population denominators.",
+      "limitation": "A plausible warrant is not measured evidence; retain qualifiers and alternative explanations.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 40,
+          "family": "Concept visualization",
+          "method": "Toulmin map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV17",
+      "family": "Concept visualization",
+      "method": "Decision tree",
+      "publisher_label": "decision tree",
+      "sources": [
+        "places",
+        "hrsa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might transparent rules flag counties for further review?",
+      "proposed_output": "An interpretable screening-rule tree, example paths, and a threshold sensitivity table.",
+      "learner_activity": "Change one threshold and audit which counties change status.",
+      "limitation": "Analyst thresholds are not medical triage rules or validated eligibility criteria.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 46,
+          "family": "Metaphor visualization",
+          "method": "Decision tree"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV18",
+      "family": "Concept visualization",
+      "method": "Critical path method",
+      "publisher_label": "critical path method",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which preparation tasks control delivery of a small imagery lesson?",
+      "proposed_output": "A dependency DAG, forward/backward pass, slack table, and highlighted critical path.",
+      "learner_activity": "Change a noncritical duration until it changes the critical path.",
+      "limitation": "Task durations are assumptions; the method requires actual dependency calculations, not highlighted arrows alone.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 51,
+          "family": "Metaphor visualization",
+          "method": "Critical path method"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV19",
+      "family": "Concept visualization",
+      "method": "Concept fan",
+      "publisher_label": "concept fan",
+      "sources": [
+        "hrsa",
+        "worldpop",
+        "healthsites"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What alternative approaches could improve a facility-access assessment?",
+      "proposed_output": "A concept fan from purpose through approaches to feasible analyses, each tied to available evidence.",
+      "learner_activity": "Compare distance, capacity, and travel-time approaches and mark unavailable inputs.",
+      "limitation": "An attractive branch is a research option, not an established intervention benefit.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 54,
+          "family": "Metaphor visualization",
+          "method": "Concept fan"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV20",
+      "family": "Concept visualization",
+      "method": "Concept map",
+      "publisher_label": "concept map",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How do geography, denominators, estimates, and uncertainty connect?",
+      "proposed_output": "A labeled proposition map with cross-links and worked examples from two releases.",
+      "learner_activity": "Read every edge as a sentence and correct an unsupported proposition.",
+      "limitation": "Use explicit linking phrases; proximity and arrows without semantics are insufficient.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 61,
+          "family": "Metaphor visualization",
+          "method": "Concept map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV21",
+      "family": "Concept visualization",
+      "method": "Soft systems modeling",
+      "publisher_label": "soft system modeling",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can an access project expose conflicting purposes before choosing metrics?",
+      "proposed_output": "A rich situation summary, CATWOE/root definitions, conceptual activity model, and comparison with public data.",
+      "learner_activity": "Compare two stakeholder worldviews and identify a feasible improvement question.",
+      "limitation": "This is a structured inquiry, not a calibrated simulation or a claim of stakeholder consensus.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 32,
+          "family": "Concept visualization",
+          "method": "Soft system modelling"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV22",
+      "family": "Concept visualization",
+      "method": "Synergy map",
+      "publisher_label": "synergy map",
+      "sources": [
+        "hrsa",
+        "acs",
+        "epa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which proposed data-quality and outreach activities might reinforce one another?",
+      "proposed_output": "A time-oriented relationship map with complementary/conflicting activities and an evidence ledger.",
+      "learner_activity": "Remove one assumed relationship and reassess the plan.",
+      "limitation": "Synergy strengths are hypothetical until evaluated; avoid presenting made-up benefits as outcomes.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 35,
+          "family": "Concept visualization",
+          "method": "Synergy map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV23",
+      "family": "Concept visualization",
+      "method": "Force field diagram",
+      "publisher_label": "force field diagram",
+      "sources": [
+        "healthsites",
+        "worldpop",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What helps or hinders an equitable browser-based mapping workshop?",
+      "proposed_output": "Driving/restraining forces supported by measured file sizes and documented device/network constraints.",
+      "learner_activity": "Change an assumed weight and test whether the recommendation changes.",
+      "limitation": "Separate actual runtime measurements from unelicited judgments about a community.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 38,
+          "family": "Concept visualization",
+          "method": "Force field diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV24",
+      "family": "Concept visualization",
+      "method": "IBIS argumentation map",
+      "publisher_label": "ibis argumentation map",
+      "sources": [
+        "epa",
+        "hrsa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can a team retain issues, positions, and arguments about county prioritization?",
+      "proposed_output": "An IBIS graph with typed nodes, source-linked arguments, and unresolved issues.",
+      "learner_activity": "Add a counter-position and trace which evidence it challenges.",
+      "limitation": "Argument counts are not votes, truth probabilities, or stakeholder agreement.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 41,
+          "family": "Concept visualization",
+          "method": "IBIS argumentation map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV25",
+      "family": "Concept visualization",
+      "method": "Process-event chains",
+      "publisher_label": "process event chains",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "Which events trigger each stage of a reproducible imagery refresh?",
+      "proposed_output": "An event-driven process chain with alternating events/functions and explicit AND/XOR connectors.",
+      "learner_activity": "Trace an invalid asset through the failure branch.",
+      "limitation": "Use event/function semantics; downloaded metadata alone does not mean pixels passed validation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 47,
+          "family": "Metaphor visualization",
+          "method": "Process event chains"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV26",
+      "family": "Concept visualization",
+      "method": "PERT chart",
+      "publisher_label": "pert chart",
+      "sources": [
+        "epa",
+        "acs"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How does uncertain preparation effort affect the lesson delivery plan?",
+      "proposed_output": "A dependency network with optimistic/likely/pessimistic durations and calculated expected times.",
+      "learner_activity": "Compare PERT estimates with a small Monte Carlo duration experiment.",
+      "limitation": "Assumptions about duration distributions and dependence limit any completion probability.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 52,
+          "family": "Metaphor visualization",
+          "method": "PERT chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV27",
+      "family": "Concept visualization",
+      "method": "Evocative knowledge map",
+      "publisher_label": "evocative knowledge map",
+      "sources": [
+        "noaa_co2",
+        "nasa_power"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Which visual anchors help learners recall units, scales, and climate-data limitations?",
+      "proposed_output": "An original illustrated map of concepts with source-linked mini-charts and retrieval prompts.",
+      "learner_activity": "Recall three distinctions before reopening the source cards.",
+      "limitation": "Memory cues are authored illustrations, not additional data or claims that learning improved without evaluation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 56,
+          "family": "Metaphor visualization",
+          "method": "Evocative knowledge maps"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CV28",
+      "family": "Concept visualization",
+      "method": "Vee diagram",
+      "publisher_label": "vee diagram",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How do an earthquake question, conceptual model, observations, and conclusions connect?",
+      "proposed_output": "A Vee linking the focus question, catalog concepts, record selection, transforms, and justified claims.",
+      "learner_activity": "Trace one conclusion down to an event record and back to its assumptions.",
+      "limitation": "A diagram of inquiry cannot remove selection bias or depth uncertainty.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 62,
+          "family": "Metaphor visualization",
+          "method": "Vee diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV01",
+      "family": "Metaphor visualization",
+      "method": "Metro map",
+      "publisher_label": "metro map",
+      "sources": [
+        "acs",
+        "places",
+        "hrsa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "How can learners navigate alternative routes through a county-health investigation?",
+      "proposed_output": "An original schematic route map with analysis stops, transfers, prerequisites, and links to evidence.",
+      "learner_activity": "Take a different route and identify the shared validation stop.",
+      "limitation": "The metro geometry encodes learning order, not actual transport, distance, or service access.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 48,
+          "family": "Metaphor visualization",
+          "method": "Metro map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV02",
+      "family": "Metaphor visualization",
+      "method": "Temple",
+      "publisher_label": "temple",
+      "sources": [
+        "epa",
+        "acs"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "What evidence pillars support a defensible county air-quality comparison?",
+      "proposed_output": "A temple metaphor with foundation definitions, separate evidence pillars, and a qualified conclusion.",
+      "learner_activity": "Remove a denominator or quality-control pillar and revise the claim.",
+      "limitation": "Architectural symmetry must not imply equal evidential strength or independent data sources.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 53,
+          "family": "Metaphor visualization",
+          "method": "Temple"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV03",
+      "family": "Metaphor visualization",
+      "method": "Story template",
+      "publisher_label": "story template",
+      "sources": [
+        "usgs",
+        "natural_earth"
+      ],
+      "evidence_kind": "observations",
+      "question": "How can a fixed earthquake sequence become an explanatory geographic story?",
+      "proposed_output": "A setting-question-evidence-limits-reflection template with timeline, map, 3D depth scene, and table.",
+      "learner_activity": "Reorder the evidence and explain how the narrative emphasis changes.",
+      "limitation": "Avoid disaster sensationalism and prediction claims; event depth is not surface elevation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 58,
+          "family": "Metaphor visualization",
+          "method": "Story template"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV04",
+      "family": "Metaphor visualization",
+      "method": "Tree",
+      "publisher_label": "tree",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How can a branching metaphor organize public facility categories?",
+      "proposed_output": "A category tree populated from site metadata with leaf counts and a tabular taxonomy.",
+      "learner_activity": "Reclassify an ambiguous site and document the consequence.",
+      "limitation": "Administrative categories are not evolutionary relationships or measures of service quality.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 63,
+          "family": "Metaphor visualization",
+          "method": "Tree"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV05",
+      "family": "Metaphor visualization",
+      "method": "Bridge",
+      "publisher_label": "bridge",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "What joins and assumptions bridge a demographic question to a health comparison?",
+      "proposed_output": "A bridge metaphor whose supports are source checks, GEOIDs, definitions, and period alignment.",
+      "learner_activity": "Break one support using a mismatched geography vintage and diagnose the join.",
+      "limitation": "The metaphor must expose validation requirements rather than imply the datasets are automatically compatible.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 59,
+          "family": "Metaphor visualization",
+          "method": "Bridge"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV06",
+      "family": "Metaphor visualization",
+      "method": "Funnel",
+      "publisher_label": "funnel",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How many imagery candidates remain after reproducible selection and quality filters?",
+      "proposed_output": "A stage-count funnel with the exact STAC query, filters, item IDs, and rejected-item reasons.",
+      "learner_activity": "Reorder two filters and inspect the retained candidate set.",
+      "limitation": "Stage counts are selection counts, not measured health outcomes; use actual metadata and pixel checks where required.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 64,
+          "family": "Metaphor visualization",
+          "method": "Funnel"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV07",
+      "family": "Metaphor visualization",
+      "method": "Parameter ruler",
+      "publisher_label": "PARAMETER RULER",
+      "sources": [
+        "usgs"
+      ],
+      "evidence_kind": "observations",
+      "question": "How do magnitude and depth occupy different measurement scales?",
+      "proposed_output": "Independent rulers with observed event markers, units, limits, and a log-energy explanation.",
+      "learner_activity": "Compare a magnitude difference with a depth difference without merging their units.",
+      "limitation": "Magnitude is logarithmic and magnitude types differ; ruler length must not imply linear energy.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 65,
+          "family": "Metaphor visualization",
+          "method": "Parameter ruler"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV08",
+      "family": "Metaphor visualization",
+      "method": "Iceberg diagram",
+      "publisher_label": "iceberg diagram",
+      "sources": [
+        "healthsites",
+        "worldpop"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Which assumptions lie beneath a simple facility-access map?",
+      "proposed_output": "An iceberg with visible outputs and submerged coverage, population-model, projection, and capacity caveats.",
+      "learner_activity": "Inspect one visible pattern and list the hidden inputs it depends on.",
+      "limitation": "The drawing does not quantify the share of known versus unknown information.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 66,
+          "family": "Metaphor visualization",
+          "method": "Iceberg"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "MV09",
+      "family": "Metaphor visualization",
+      "method": "Heaven and hell chart",
+      "publisher_label": "heaven 'n' hell chart",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What are the best- and worst-case consequences of a proposed access dashboard?",
+      "proposed_output": "Paired opportunity/risk scenarios, real source constraints, and mitigation questions.",
+      "learner_activity": "Revise both scenarios after observing missing facility attributes.",
+      "limitation": "Extremes are discussion scenarios, not forecasts or measured stakeholder preferences.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 67,
+          "family": "Metaphor visualization",
+          "method": "Heaven and hell chart"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO01",
+      "family": "Compound visualization",
+      "method": "Graphic facilitation",
+      "publisher_label": "graphic facilitation",
+      "sources": [
+        "hrsa",
+        "acs",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can a workshop capture an evidence-aware discussion of access to services?",
+      "proposed_output": "An original visual record mixing a real county summary, icons, hypotheses, decisions, and open questions.",
+      "learner_activity": "Tag every mark as evidence, assumption, question, or decision.",
+      "limitation": "The facilitated session is illustrative; icons and dialogue must be original and clearly attributed where reused.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 68,
+          "family": "Compound visualization",
+          "method": "Graphic facilitation"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO02",
+      "family": "Compound visualization",
+      "method": "Cartoon",
+      "publisher_label": "cartoon",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Why can a plausible county-health chart still mislead?",
+      "proposed_output": "An original short illustrated sequence about denominators, accompanied by real counts and rate comparisons.",
+      "learner_activity": "Rewrite the final panel to acknowledge uncertainty.",
+      "limitation": "Characters are fictional; humor must not stereotype patients or communities and is not substitute evidence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 69,
+          "family": "Compound visualization",
+          "method": "Cartoon"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO03",
+      "family": "Compound visualization",
+      "method": "Rich picture",
+      "publisher_label": "rich picture",
+      "sources": [
+        "worldpop",
+        "healthsites",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What social, technical, and evidence issues surround a population-access map?",
+      "proposed_output": "An original rich picture with public data anchors, hypothetical actors, tensions, and an explanatory legend.",
+      "learner_activity": "Add a missing concern and distinguish its evidence status.",
+      "limitation": "Do not portray imagined community preferences as field research or imply that facility points measure care quality.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 70,
+          "family": "Compound visualization",
+          "method": "Rich picture"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO04",
+      "family": "Compound visualization",
+      "method": "Knowledge map",
+      "publisher_label": "knoledge map",
+      "sources": [
+        "acs",
+        "places",
+        "epa",
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Where are the course's evidence, definitions, expertise, and gaps located?",
+      "proposed_output": "An interactive knowledge map linking datasets, methods, caveats, and source cards with a list alternative.",
+      "learner_activity": "Follow a claim to its data and identify an unresolved evidence gap.",
+      "limitation": "A resource relationship is not a causal relationship; preserve accessible navigation and stable links.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 71,
+          "family": "Compound visualization",
+          "method": "Knowledge map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO05",
+      "family": "Compound visualization",
+      "method": "Learning map",
+      "publisher_label": "Learning Map",
+      "sources": [
+        "worldpop",
+        "healthsites",
+        "sentinel",
+        "usgs"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How can learners plan a route from basic charts to a responsible 3D story?",
+      "proposed_output": "An original learning landscape with objectives, prerequisites, worked examples, reflection stops, and progress export.",
+      "learner_activity": "Choose a beginner and an advanced route and explain prerequisite choices.",
+      "limitation": "Do not imitate the publisher's poster or claim that a progress check proves mastery.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "CO06",
+      "family": "Compound visualization",
+      "method": "Infomural",
+      "publisher_label": "infomural",
+      "sources": [
+        "acs",
+        "places",
+        "epa",
+        "hrsa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How can multiple county-health views form one coherent evidence story?",
+      "proposed_output": "A coordinated large-format dashboard of maps, distributions, uncertainty, narrative, and data tables.",
+      "learner_activity": "Trace a highlighted county across every panel and test a competing interpretation.",
+      "limitation": "All panels must share explicit selection state and source years; visual coherence does not imply causal coherence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 73,
+          "family": "Compound visualization",
+          "method": "Infomural"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV01",
+      "family": "Strategy visualization",
+      "method": "Supply-demand curve",
+      "publisher_label": "supply demand curve",
+      "sources": [
+        "hrsa",
+        "acs"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might assumed service supply and demand respond to a capacity decision?",
+      "proposed_output": "Explicit hypothetical curves anchored to observed population/site context plus sensitivity plots.",
+      "learner_activity": "Change elasticities and compare the assumed intersection.",
+      "limitation": "Sites and population do not identify economic supply/demand curves; distinguish this from the legacy supply-chain sketch.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 74,
+          "family": "Strategy visualization",
+          "method": "Supply demand chain"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV02",
+      "family": "Strategy visualization",
+      "method": "Performance charting",
+      "publisher_label": "performance charting",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How does monitored air quality compare with an explicit historical baseline?",
+      "proposed_output": "Actual AQI time series, baseline bands, completeness, and a table of deviations.",
+      "learner_activity": "Compare a rolling baseline with a fixed historical baseline.",
+      "limitation": "Baseline bands are descriptive unless a justified control-chart model is supplied; no invented performance target.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 76,
+          "family": "Strategy visualization",
+          "method": "Performance charting"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV03",
+      "family": "Strategy visualization",
+      "method": "Strategy map",
+      "publisher_label": "strategy map",
+      "sources": [
+        "hrsa",
+        "acs",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How could an access-analysis project connect capabilities, activities, and intended outcomes?",
+      "proposed_output": "A hypothesis-based strategy map with real baseline measures and a test plan for each arrow.",
+      "learner_activity": "Remove an unsupported arrow and rewrite the evaluation question.",
+      "limitation": "Strategic arrows express proposed mechanisms, not measured causal effects or promises of improved health.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 78,
+          "family": "Strategy visualization",
+          "method": "Strategy map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV04",
+      "family": "Strategy visualization",
+      "method": "Organization chart",
+      "publisher_label": "organisation chart",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "Which public HRSA metadata describe parent organizations and delivery sites?",
+      "proposed_output": "An organization/site chart derived from verified parent identifiers with a source table.",
+      "learner_activity": "Inspect a site whose administrative relationship differs from geography.",
+      "limitation": "Do not infer legal control or employment reporting from mere co-location; link authoritative organization definitions.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV05",
+      "family": "Strategy visualization",
+      "method": "House of quality",
+      "publisher_label": "house of quality",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might accessibility requirements guide the browser-lab design?",
+      "proposed_output": "A requirements-to-features matrix with explicit assumed importance and relationship scores.",
+      "learner_activity": "Change one priority weight and test the ranking stability.",
+      "limitation": "Scores are illustrative until elicited; no fabricated resident survey or claimed consensus.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 80,
+          "family": "Strategy visualization",
+          "method": "House of quality"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV06",
+      "family": "Strategy visualization",
+      "method": "Feedback diagram",
+      "publisher_label": "feedback diagram",
+      "sources": [
+        "worldpop",
+        "healthsites"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which hypothesized feedbacks affect facility-data completeness?",
+      "proposed_output": "A signed causal-loop diagram, delays, evidence notes, and comparison with a stock-flow model.",
+      "learner_activity": "Identify a reinforcing and a balancing loop and question an unsupported sign.",
+      "limitation": "Loop signs and mechanisms are hypotheses; a loop diagram alone is not a simulation or proof of dynamics.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 82,
+          "family": "Strategy visualization",
+          "method": "Feedback diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV07",
+      "family": "Strategy visualization",
+      "method": "Failure tree",
+      "publisher_label": "failure tree",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How could a misleading county-health map be produced?",
+      "proposed_output": "A fault tree with explicit AND/OR gates for join, denominator, missingness, and labeling failures.",
+      "learner_activity": "Evaluate a concrete bad-input case and identify minimal failure combinations.",
+      "limitation": "Do not multiply invented failure probabilities or assume independence; preserve actual validation evidence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 84,
+          "family": "Strategy visualization",
+          "method": "Failure tree"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV08",
+      "family": "Strategy visualization",
+      "method": "Magic quadrant",
+      "publisher_label": "magic quadrant",
+      "sources": [
+        "usgs",
+        "hrsa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How does a two-axis screening chart change with axis and threshold choices?",
+      "proposed_output": "A generic two-axis quadrant built from clearly defined public indicators and a supporting ranked table.",
+      "learner_activity": "Move both cutoffs and audit category changes.",
+      "limitation": "This is an instructional quadrant, not a licensed analyst report or objective vendor rating; axes need defensible meaning.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 86,
+          "family": "Strategy visualization",
+          "method": "Magic quadrant"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV09",
+      "family": "Strategy visualization",
+      "method": "Life-cycle diagram",
+      "publisher_label": "life cycle diagram",
+      "sources": [
+        "sentinel"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "How should a data artifact move from discovery to revision and retirement?",
+      "proposed_output": "A lifecycle linked to a real STAC item, derived artifact, manifest, validation, and version history.",
+      "learner_activity": "Simulate a provider revision and identify artifacts requiring regeneration.",
+      "limitation": "A lifecycle stage is not a certification of data quality; archive source dates and prior hashes.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 96,
+          "family": "Strategy visualization",
+          "method": "Life-cycle diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV10",
+      "family": "Strategy visualization",
+      "method": "Porter's five forces",
+      "publisher_label": "porter's five forces",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "When does a market-strategy lens help or distort a public-health data ecosystem?",
+      "proposed_output": "A five-forces teaching analysis with documented source/service constraints and a public-value counter-analysis.",
+      "learner_activity": "Identify two needs that the competitive-market lens fails to capture.",
+      "limitation": "Do not rank care providers competitively from site counts; this is a critical framework exercise with hypothetical judgments.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 90,
+          "family": "Strategy visualization",
+          "method": "Porter five forces"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV11",
+      "family": "Strategy visualization",
+      "method": "S-curve",
+      "publisher_label": "s-cycle",
+      "sources": [
+        "healthsites"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can an assumed adoption curve be confused with observed database growth?",
+      "proposed_output": "A labeled logistic scenario beside actual dated snapshot counts only if comparable snapshots are available.",
+      "learner_activity": "Fit contrasting parameter choices and explain non-identifiability from sparse evidence.",
+      "limitation": "Do not claim an adoption history from a single snapshot; the source label s-cycle is normalized here to S-curve.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 92,
+          "family": "Strategy visualization",
+          "method": "S-curve"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV12",
+      "family": "Strategy visualization",
+      "method": "Stakeholder map",
+      "publisher_label": "stakeholder map",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Who should be consulted about a community-health visualization?",
+      "proposed_output": "A provisional role/interest map with public institutional sources and unanswered engagement questions.",
+      "learner_activity": "Add a missing group and revise the consultation plan.",
+      "limitation": "Influence and interest are assumed until elicited; do not attribute views to real individuals.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 94,
+          "family": "Strategy visualization",
+          "method": "Stakeholder map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV13",
+      "family": "Strategy visualization",
+      "method": "Ishikawa diagram",
+      "publisher_label": "ishikawa diagram",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What could explain missing or unusual air-quality measurements?",
+      "proposed_output": "A fishbone of candidate data, instrument, environment, and processing explanations alongside actual quality flags.",
+      "learner_activity": "Select an anomalous record and propose evidence that would test two branches.",
+      "limitation": "Candidate causes are hypotheses; do not state an instrument failed without source evidence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 95,
+          "family": "Strategy visualization",
+          "method": "Ishikawa diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV14",
+      "family": "Strategy visualization",
+      "method": "Technology roadmap",
+      "publisher_label": "technology roadmap",
+      "sources": [
+        "sentinel",
+        "usgs",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can browser GIS capabilities be introduced without overpromising native tools?",
+      "proposed_output": "A layered roadmap of learning needs, validated capabilities, dependencies, and dated experiments.",
+      "learner_activity": "Move a capability from proposed to demonstrated only after recording a test.",
+      "limitation": "Roadmap dates are assumptions; external services and native GeoAI are separate from JupyterLite execution.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 98,
+          "family": "Strategy visualization",
+          "method": "Technology roadmap"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV15",
+      "family": "Strategy visualization",
+      "method": "Edgeworth box",
+      "publisher_label": "edgeworth box",
+      "sources": [
+        "hrsa",
+        "acs"
+      ],
+      "evidence_kind": "scenario",
+      "question": "What does a stylized allocation model reveal about competing resource preferences?",
+      "proposed_output": "A genuine two-agent, two-good Edgeworth box with endowments, assumed utility contours, and contract-curve analysis.",
+      "learner_activity": "Change a utility parameter and explain the changed model outcome.",
+      "limitation": "Public population/site counts supply context, not utilities; this economic abstraction does not determine fair health allocation.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 75,
+          "family": "Strategy visualization",
+          "method": "Edgeworth box"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV16",
+      "family": "Strategy visualization",
+      "method": "Portfolio diagram",
+      "publisher_label": "portfolio diagram",
+      "sources": [
+        "hrsa",
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How might candidate analysis projects compare on need, effort, and evidence quality?",
+      "proposed_output": "A labeled bubble portfolio with real descriptive baselines and separate assumed effort scores.",
+      "learner_activity": "Vary effort assumptions and compare the resulting shortlist.",
+      "limitation": "A bubble score is not a measured intervention benefit; avoid double counting correlated indicators.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 77,
+          "family": "Strategy visualization",
+          "method": "Portfolio diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV17",
+      "family": "Strategy visualization",
+      "method": "Strategic game board",
+      "publisher_label": "strategic game board",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can a team compare interdependent choices in an access-data project?",
+      "proposed_output": "An original decision board with actors, moves, information available, and explicitly assumed payoff scenarios.",
+      "learner_activity": "Change one payoff assumption and see whether the preferred move changes.",
+      "limitation": "Hypothetical incentives are not observed behavior; do not claim a real policy equilibrium or copy a proprietary board.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [],
+      "crosswalk_status": "missing_from_legacy",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV18",
+      "family": "Strategy visualization",
+      "method": "Mintzberg's organigraph",
+      "publisher_label": "mintzberg's organigraph",
+      "sources": [
+        "hrsa"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How do organizations, service sites, and data flows relate beyond a hierarchy?",
+      "proposed_output": "An organigraph using sets, chains, hubs, and networks linked to verified public organizational metadata.",
+      "learner_activity": "Compare the same evidence with an organization chart and identify unsupported links.",
+      "limitation": "Use organigraph semantics explicitly; do not infer referral flows, authority, or partnerships absent evidence.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 79,
+          "family": "Strategy visualization",
+          "method": "Mintzberg organization"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV19",
+      "family": "Strategy visualization",
+      "method": "Zwicky's morphological box",
+      "publisher_label": "zwicky's morphological box",
+      "sources": [
+        "worldpop",
+        "healthsites",
+        "sentinel"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which combinations of geography, data, method, and delivery mode make a feasible lesson?",
+      "proposed_output": "A morphological box with dimensions, candidate configurations, and documented compatibility constraints.",
+      "learner_activity": "Eliminate an invalid native-package-in-Pyodide combination and design a feasible alternative.",
+      "limitation": "Configurations are design possibilities, not evaluated health interventions or measured capabilities.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 81,
+          "family": "Strategy visualization",
+          "method": "Zwicky morphological box"
+        }
+      ],
+      "crosswalk_status": "name_or_implementation_review",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV20",
+      "family": "Strategy visualization",
+      "method": "Affinity diagram",
+      "publisher_label": "affinity diagram",
+      "sources": [
+        "acs",
+        "places",
+        "epa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How can learners group evidence-quality concerns across datasets?",
+      "proposed_output": "Source-backed concern cards grouped into themes with links back to metadata.",
+      "learner_activity": "Regroup ambiguous cards and compare interpretations without forcing agreement.",
+      "limitation": "Groups are an analytic judgment, not a discovered natural taxonomy or a fabricated interview study.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 83,
+          "family": "Strategy visualization",
+          "method": "Affinity diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV21",
+      "family": "Strategy visualization",
+      "method": "Decision discovery diagram",
+      "publisher_label": "decision discovery diagram",
+      "sources": [
+        "acs",
+        "places",
+        "hrsa"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which hidden decisions shape a county-prioritization analysis?",
+      "proposed_output": "A branching discovery diagram of choices, evidence needs, assumptions, and consequences.",
+      "learner_activity": "Follow two routes differing only in denominator or threshold and compare results.",
+      "limitation": "The diagram exposes choices rather than selecting a scientifically optimal policy from insufficient data.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 85,
+          "family": "Strategy visualization",
+          "method": "Decision discovery diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV22",
+      "family": "Strategy visualization",
+      "method": "BCG matrix",
+      "publisher_label": "bcg matrix",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How does the original growth/share portfolio model differ from a public-health prioritization chart?",
+      "proposed_output": "A true BCG teaching example with explicit hypothetical market-share/growth values, plus a critically labeled public-service adaptation.",
+      "learner_activity": "Explain why population need is not market share and design a more suitable alternative.",
+      "limitation": "Do not call need-versus-effort quadrants a faithful BCG matrix or invent market data for care providers.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 87,
+          "family": "Strategy visualization",
+          "method": "BCG matrix"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV23",
+      "family": "Strategy visualization",
+      "method": "Strategy canvas",
+      "publisher_label": "strategy canvas",
+      "sources": [
+        "hrsa",
+        "acs",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How do alternative browser lessons compare on accessibility and evidence features?",
+      "proposed_output": "A factor-by-option canvas with measured payload sizes and labeled assumed usability/teaching judgments.",
+      "learner_activity": "Separate measured factors from assumed scores and test a changed weighting.",
+      "limitation": "No fabricated user study or objective ranking; ordinal judgments must not masquerade as continuous measurements.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 89,
+          "family": "Strategy visualization",
+          "method": "Strategy canvas"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV24",
+      "family": "Strategy visualization",
+      "method": "Value chain",
+      "publisher_label": "value chain",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "Where is analytical value added between data acquisition and an explanatory chart?",
+      "proposed_output": "A source-to-decision activity chain with actual artifacts, validation checks, and known loss points.",
+      "learner_activity": "Trace an omitted quality check to the chart claim it weakens.",
+      "limitation": "Value is an analytical interpretation, not a demonstrated monetary return or health impact.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 91,
+          "family": "Strategy visualization",
+          "method": "Value chain"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV25",
+      "family": "Strategy visualization",
+      "method": "Hype cycle",
+      "publisher_label": "hype cycle",
+      "sources": [
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can learners distinguish demonstrated GeoAI capabilities from expectations?",
+      "proposed_output": "An original schematic expectation curve with dated primary-source capability cards and a critique of the model.",
+      "learner_activity": "Place a claim using evidence, then explain why a location on the curve is subjective.",
+      "limitation": "The curve is a metaphor, not measured adoption or a copied branded report; do not forecast maturity dates.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 93,
+          "family": "Strategy visualization",
+          "method": "Hype cycle"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV26",
+      "family": "Strategy visualization",
+      "method": "Stakeholder rating map",
+      "publisher_label": "stakeholder rating map",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How sensitive is a consultation plan to assumed stakeholder ratings?",
+      "proposed_output": "A transparent rating map with hypothetical criteria, evidence notes, and uncertainty ranges.",
+      "learner_activity": "Change two plausible ratings and inspect the altered outreach priorities.",
+      "limitation": "No scores are attributed to real participants; validate with stakeholders before any operational use.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 88,
+          "family": "Strategy visualization",
+          "method": "Stakeholder rating map"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV27",
+      "family": "Strategy visualization",
+      "method": "TAPS",
+      "publisher_label": "taps",
+      "sources": [
+        "epa",
+        "acs"
+      ],
+      "evidence_kind": "documented_structure",
+      "question": "How can a team turn an air-quality question into a transparent action discussion?",
+      "proposed_output": "A To-Be / As-Is / Problem / Solution structure anchored to actual descriptive evidence and explicit proposed changes.",
+      "learner_activity": "Audit every solution claim and identify what evaluation data are still needed.",
+      "limitation": "Desired states and solutions are proposals, not outcomes measured by the observational data.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 97,
+          "family": "Strategy visualization",
+          "method": "TAPS"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    },
+    {
+      "id": "SV28",
+      "family": "Strategy visualization",
+      "method": "Spray diagram",
+      "publisher_label": "spray diagram",
+      "sources": [
+        "nasa_power",
+        "places",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "Which questions should precede a climate-health causal claim?",
+      "proposed_output": "An open branching spray of questions, observed variables, possible confounders, and evidence gaps.",
+      "learner_activity": "Mark which branches can be answered with the bundled data and which require new studies.",
+      "limitation": "Brainstormed links are not established mechanisms or an empirical causal network.",
+      "runtime": "JupyterLite Python; exported browser scene where specified",
+      "legacy_matches": [
+        {
+          "legacy_id": 42,
+          "family": "Concept visualization",
+          "method": "Spray diagram"
+        }
+      ],
+      "crosswalk_status": "existing_heading",
+      "implementation_status": "proposed"
+    }
+  ],
+  "legacy_appendix": [
+    {
+      "legacy_id": 14,
+      "family": "Information visualization",
+      "method": "Tensor diagram",
+      "id": "LA014",
+      "sources": [
+        "noaa_weather"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How can a station-by-month-by-variable data tensor be inspected without losing units?",
+      "proposed_output": "Build a real three-axis array with labeled dimensions, missingness mask, and comparable 2D slices; demonstrate one explicit aggregation.",
+      "learner_activity": "Compare a slice with its source records and change the aggregation axis.",
+      "limitation": "Different variables retain different units; an arbitrary 3D wireframe is not a tensor analysis.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 16,
+      "family": "Information visualization",
+      "method": "Chernoff faces",
+      "id": "LA016",
+      "sources": [
+        "acs",
+        "places"
+      ],
+      "evidence_kind": "model_estimates",
+      "question": "Do Chernoff faces help or hinder comparison of county indicator profiles?",
+      "proposed_output": "Normalized county faces beside aligned dot plots, a feature-to-variable key, and raw-value table.",
+      "learner_activity": "Change the mapping of indicators to facial features and compare apparent similarities.",
+      "limitation": "Facial features have unequal perceptual weight; avoid stigmatizing labels and unsupported personality or health judgments.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 20,
+      "family": "Information visualization",
+      "method": "Nassi-Shneiderman diagram",
+      "id": "LA020",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "How does structured control flow implement an auditable quality check?",
+      "proposed_output": "A true Nassi-Shneiderman nesting diagram aligned with executable sequence, conditional, and loop code for daily records.",
+      "learner_activity": "Trace valid, missing, and flagged records through both code and the structured diagram.",
+      "limitation": "Do not substitute a generic node-link flow chart; exclusions require explicit reasons and preserved source values.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 22,
+      "family": "Information visualization",
+      "method": "Feedback cycle diagram",
+      "id": "LA022",
+      "sources": [
+        "healthsites",
+        "worldpop"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How could verification and reporting form a facility-data improvement cycle?",
+      "proposed_output": "An explicit feedback-cycle model with actual missingness summaries, assumed update behavior, and comparison to a signed causal loop.",
+      "learner_activity": "Change an assumed verification rate and identify what evidence would validate it.",
+      "limitation": "A cycle of activities does not prove a feedback effect; rates and community responses remain assumptions.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 25,
+      "family": "Information visualization",
+      "method": "Pareto chart",
+      "id": "LA025",
+      "sources": [
+        "epa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "Which documented quality or missingness flags account for most excluded records?",
+      "proposed_output": "Descending flag counts, cumulative percentages, and a complete audit table including overlapping-flag policy.",
+      "learner_activity": "Change the time window and test whether the ranking is stable.",
+      "limitation": "The 80/20 pattern is not guaranteed; mutually overlapping flags require a defined counting rule and are not causes.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 72,
+      "family": "Compound visualization",
+      "method": "Cognitive mapping",
+      "id": "LA072",
+      "sources": [
+        "hrsa",
+        "phi_ethics"
+      ],
+      "evidence_kind": "scenario",
+      "question": "How can a learner make their assumptions about service access explicit?",
+      "proposed_output": "An original elicitation prompt and clearly hypothetical cognitive map compared with public facility/population evidence.",
+      "learner_activity": "Annotate each believed relationship as supported, uncertain, or contradicted by available evidence.",
+      "limitation": "This is a learner model, not measured community cognition, stakeholder consensus, or a calibrated causal network.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 99,
+      "family": "Strategy visualization",
+      "method": "Performance map",
+      "id": "LA099",
+      "sources": [
+        "epa",
+        "hrsa"
+      ],
+      "evidence_kind": "derived_summary",
+      "question": "How can a performance map make data-quality coverage visible?",
+      "proposed_output": "A matrix heatmap of real completeness/timeliness measures with explicit denominators and source dates.",
+      "learner_activity": "Compare missingness patterns after changing the selected stations or sites.",
+      "limitation": "This legacy term is defined locally; data completeness is not provider quality, health outcomes, or an invented composite performance score.",
+      "implementation_status": "proposed"
+    },
+    {
+      "legacy_id": 100,
+      "family": "Strategy visualization",
+      "method": "Value chain analysis",
+      "id": "LA100",
+      "sources": [
+        "acs",
+        "places",
+        "epa"
+      ],
+      "evidence_kind": "documented_workflow",
+      "question": "What does each processing step add, discard, or leave unresolved?",
+      "proposed_output": "A value-chain audit using actual row counts, join losses, payload sizes, artifacts, and validation results at each stage.",
+      "learner_activity": "Remove one check and trace the resulting unsupported chart claim.",
+      "limitation": "Processing metrics are observed for this pipeline; monetary value and public-health benefit are not measured.",
+      "implementation_status": "proposed"
+    }
+  ],
+  "crosswalk_note": "A heading match is not a validation of the existing implementation. Correct family placement, semantics, and fidelity in the new course; preserve all legacy examples in an appendix. Supply-demand chain is replaced by an explicitly distinct supply-demand curve; the loop diagram requires a numerical stock-flow extension. Do not treat Cognitive mapping as Learning map or Performance map as Organization chart."
+}
