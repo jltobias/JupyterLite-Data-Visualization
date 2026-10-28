@@ -16,11 +16,24 @@ class Links(HTMLParser):
     def __init__(self):
         super().__init__()
         self.targets = []
+        self.config = None
+        self._config_parts = None
 
     def handle_starttag(self, tag, attrs):
+        if tag == "script" and dict(attrs).get("id") == "jupyter-config-data":
+            self._config_parts = []
         for key, value in attrs:
             if key in ("href", "src") and value:
                 self.targets.append(value)
+
+    def handle_data(self, data):
+        if self._config_parts is not None:
+            self._config_parts.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "script" and self._config_parts is not None:
+            self.config = json.loads("".join(self._config_parts))
+            self._config_parts = None
 
 
 def main():
@@ -31,6 +44,12 @@ def main():
     ]
     for relative in expected:
         assert (SITE / relative).is_file(), f"Missing advertised destination: {relative}"
+    # The real loader fetches index.html at both levels and reads this element.
+    # A parent landing page without it returns HTTP 200 but prevents lab startup.
+    for relative in ["index.html", "lab/index.html"]:
+        page = Links()
+        page.feed((SITE / relative).read_text(encoding="utf-8"))
+        assert isinstance(page.config, dict), f"Missing JupyterLite startup configuration in {relative}"
     for page in [SITE / "index.html", SITE / "ai-demo/index.html"]:
         links = Links()
         links.feed(page.read_text(encoding="utf-8"))

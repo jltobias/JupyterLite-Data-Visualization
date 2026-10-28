@@ -34,3 +34,22 @@ bootstrap plus cell IDs for the AI starter.
 
 The original poster remains excluded; the project license remains undecided.
 The splash and newly rendered original example figures are separate assets.
+
+## Blank lab startup correction
+
+The authored landing page initially omitted `script#jupyter-config-data`.
+JupyterLite 0.7.6's `config-utils.js` reads that element from each ancestor
+`index.html`, including the landing page, before injecting the lab bundle.
+An HTTP 200 response therefore did not establish successful startup: the missing
+element caused `Cannot read properties of null (reading 'textContent')`.
+
+The parent-page JSON configuration element has been restored without loading
+the lab on the splash page. `check_site.py` now requires valid JSON configuration
+in both the landing page and lab entry page. The check failed on the old artifact
+and passed after assembly with the corrected landing page.
+
+The actual generated loader was also run in an isolated JavaScript test with
+mock page/config responses: removing the tag reproduced that error; the fixed
+page let configuration merge and injected the application bundle with the correct
+project base URL. This checks the loader contract, not a complete browser or
+Pyodide session; browser UI access remained unavailable.
