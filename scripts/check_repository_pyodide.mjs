@@ -1,6 +1,7 @@
-/* Execute each notebook's unchanged code in a separate pinned Pyodide process.
- * Runtime assets/wheels are an explicit, ignored test prerequisite. This checks
- * real WASM Python and piplite, not JupyterLite's browser UI/service-worker mount.
+/* Execute unchanged notebook code with JupyterLite Contents/DriveFS JSON delivery.
+ * Runtime assets/wheels are an explicit, ignored test prerequisite. MEMFS starts
+ * empty; no NODEFS mount bypasses the browser's JSON.parse/JSON.stringify path.
+ * This checks WASM Python/data transport, not browser UI/service-worker behavior.
  */
 import {readFile, readdir} from "node:fs/promises";
 import path from "node:path";
@@ -34,9 +35,29 @@ zipfile.ZipFile('/tmp/piplite.whl').extractall(sysconfig.get_path('purelib'))
 import matplotlib
 matplotlib.use('Agg')
 `);
-  runtime.FS.mkdirTree("/lessons");
-  runtime.FS.mount(runtime.FS.filesystems.NODEFS,{root:lessonDir},"/lessons");
-  runtime.FS.chdir("/lessons");
+  const virtualDir="/drive/repository_examples_v2";
+  runtime.FS.mkdirTree(virtualDir);
+  runtime.FS.writeFile(virtualDir+"/repo_examples.py",await readFile(path.join(lessonDir,"repo_examples.py")));
+  let reserialized=0;
+  async function deliverDirectory(host,virtual){
+    runtime.FS.mkdirTree(virtual);
+    for(const entry of await readdir(host,{withFileTypes:true})){
+      const local=path.join(host,entry.name),target=virtual+"/"+entry.name;
+      if(entry.isDirectory()){await deliverDirectory(local,target);continue;}
+      let raw=await readFile(local);
+      if(/\.(json|geojson)$/i.test(entry.name)){
+        // Same transformation as contents/drive.js + contents/drivecontents.js.
+        const delivered=Buffer.from(JSON.stringify(JSON.parse(raw.toString("utf8"))),"utf8");
+        if(!raw.equals(delivered))reserialized++;
+        raw=delivered;
+      }
+      runtime.FS.writeFile(target,raw);
+    }
+  }
+  await deliverDirectory(path.join(lessonDir,"data"),virtualDir+"/data");
+  if(reserialized<6)throw new Error("Transport fixture did not exercise the six known representation changes");
+  // Alternate the real notebook directory and the content-root launch state.
+  runtime.FS.chdir(Number(notebookName.slice(0,2))%2===0?"/drive":virtualDir);
   const notebook=JSON.parse(await readFile(path.join(lessonDir,notebookName),"utf8"));
   let figureCount=0;
   runtime.runPython(`
@@ -60,5 +81,5 @@ plt.show = _verify_show
   }
   figureCount=runtime.runPython("_verified_figures");
   if(figureCount<3)throw new Error(`${notebookName}: fewer than three rendered figures`);
-  console.log(JSON.stringify({notebook:notebookName,pyodide:runtime.version,piplite:runtime.runPython("__import__('piplite').__version__"),figures:figureCount,result:"pass"}));
+  console.log(JSON.stringify({notebook:notebookName,pyodide:runtime.version,piplite:runtime.runPython("__import__('piplite').__version__"),transport:"Contents/DriveFS JSON",reserialized,figures:figureCount,result:"pass"}));
 }

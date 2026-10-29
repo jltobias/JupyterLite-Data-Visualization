@@ -23,6 +23,7 @@ import pandas as pd
 
 def validate() -> None:
     result = rx.validate_all()
+    check_json_transport()
     atlas = rx.read_csv("repository_atlas.csv")
     assert len(atlas) == 18 and atlas.commit.str.fullmatch("[0-9a-f]{40}").all()
     assert atlas.readme_url.str.contains("/blob/").all()
@@ -94,6 +95,75 @@ def validate() -> None:
     print(f"Companion checks passed: {result['files_verified']} hashes/schemas, 18 pinned repositories, scientific invariants, missing/modified/schema failures, malformed/semantic refresh rejection and replacement rollback.")
 
 
+def check_json_transport() -> None:
+    """Accept only equivalent JSON delivery; preserve rejection of changed data."""
+    equivalent = [b'{"n":1,"items":[true,"1",null]}',
+                  b'{ "items": [true, "1", null], "n": 1.00 }',
+                  b'{"n":1e0,"items":[true,"1",null]}']
+    expected = rx.json_value_sha256(equivalent[0])
+    assert all(rx.json_value_sha256(body) == expected for body in equivalent)
+    for body in [b'{"n":2,"items":[true,"1",null]}',
+                 b'{"n":"1","items":[true,"1",null]}',
+                 b'{"n":true,"items":[true,"1",null]}',
+                 b'{"n":1,"items":["1",true,null]}']:
+        assert rx.json_value_sha256(body) != expected
+    assert rx.json_value_sha256(b'{"n":0.10000000000000000001}') != rx.json_value_sha256(b'{"n":0.1}')
+    assert rx.json_value_sha256(b'{"n":9007199254740993}') != rx.json_value_sha256(b'{"n":9007199254740992}')
+    for body in [b'{"n":9007199254740993}', b'{"n":1e400}', b'{"n":0.10000000000000000001}']:
+        try:
+            rx.transport_fingerprints("test.json", body)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("JSON number that changes in browser delivery accepted for publication")
+    for bad in [b'{"n":NaN}', b'{"n":Infinity}', b'{"n":1,"n":2}']:
+        try:
+            rx.json_value_sha256(bad)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("Invalid/ambiguous JSON accepted")
+    for name, record in rx.manifest()["files"].items():
+        for key, value in rx.transport_fingerprints(name, (rx.DATA / name).read_bytes()).items():
+            assert record.get(key) == value, f"Stale transport fingerprint: {name}"
+    scratch = ROOT / "_build" / ("companion-transport-" + uuid.uuid4().hex)
+    try:
+        shutil.copytree(rx.DATA, scratch)
+        for path in scratch.rglob("*"):
+            if path.suffix.lower() in {".json", ".geojson"}:
+                document = json.loads(path.read_text(encoding="utf-8"))
+                path.write_text(json.dumps(document, sort_keys=True, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+        with patch.object(rx, "DATA", scratch):
+            assert rx.validate_all()["files_verified"] == 21
+            for name, change in [("nasa/provenance.json", lambda doc: doc.update(tampered=True)),
+                                 ("stac/worldpop-item.json", lambda doc: doc["properties"].update(year=2021))]:
+                path = scratch / name
+                before = path.read_bytes()
+                document = json.loads(before)
+                change(document)
+                path.write_text(json.dumps(document), encoding="utf-8")
+                try:
+                    rx.checked_path(name)
+                except ValueError as error:
+                    assert "checksum mismatch" in str(error)
+                else:
+                    raise AssertionError(f"Changed JSON accepted: {name}")
+                path.write_bytes(before)
+            csv_path = scratch / "cholera/pumps.csv"
+            csv_path.write_bytes(csv_path.read_bytes() + b"\n")
+            try:
+                rx.checked_path("cholera/pumps.csv")
+            except ValueError:
+                pass
+            else:
+                raise AssertionError("Non-JSON byte checks were weakened")
+    finally:
+        resolved = scratch.resolve()
+        assert resolved.parent == (ROOT / "_build").resolve() and resolved.name.startswith("companion-transport-")
+        shutil.rmtree(resolved)
+    print("JSON transport checks passed: equivalent formatting/numbers accepted; changed values/types/order, duplicate keys, nonfinite values and changed CSV bytes rejected.")
+
+
 def check_refresh_failures() -> None:
     """All refresh mutations and rename failures operate on disposable copies."""
     spec = importlib.util.spec_from_file_location("snapshot_refresh", ROOT / "scripts/refresh_repository_data.py")
@@ -129,6 +199,7 @@ def check_refresh_failures() -> None:
             ("malformed WorldPop collection", {url_for["stac/worldpop-collection.json"]: b"{"}),
             ("non-object Sentinel collection", {url_for["stac/sentinel-collection.json"]: b"[]"}),
             ("wrong collection identity", json_change("stac/worldpop-collection.json", lambda body: body.update(id="OTHER"))),
+            ("unsafe browser integer", json_change("stac/worldpop-collection.json", lambda body: body.update(extra_metric=9007199254740993))),
             ("changed collection license", json_change("stac/worldpop-collection.json", lambda body: body.update(license="proprietary"))),
             ("missing Sentinel notice", json_change("stac/sentinel-collection.json", lambda body: body.update(links=[link for link in body["links"] if link["rel"] != "license"]))),
             ("invalid cloud bounds", json_change("stac/sentinel-search.json", lambda body: body["features"][0]["properties"].update({"eo:cloud_cover": 101}))),

@@ -15,15 +15,15 @@ you read this page in a local preview. For a local Lab, open your preview's
 
 | Lesson | Evidence and visual question | Open code in Lab |
 | --- | --- | --- |
-| [1. Repository atlas](01_repository_atlas.ipynb) | 18 pinned source reviews; tables, matrix and bipartite connections | [Run atlas](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/01_repository_atlas.ipynb) |
-| [2. NASA climate](02_nasa_climate.ipynb) | Global annual anomaly estimates; lines, heatmaps and baselines | [Run climate](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/02_nasa_climate.ipynb) |
-| [3. NOAA sea level](03_noaa_sea_level.ipynb) | 300 monthly means at Sewells Point; season, trend and residuals | [Run sea level](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/03_noaa_sea_level.ipynb) |
-| [4. Historical cholera](04_historical_cholera.ipynb) | 250 locations / 489 recorded deaths; symbol area, weighted grids and distances | [Run cholera](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/04_historical_cholera.ipynb) |
-| [5. Spatial privacy](05_spatial_privacy.ipynb) | Hypothetical perturbations of historical points; displacement and aggregation utility | [Run privacy](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/05_spatial_privacy.ipynb) |
-| [6. STAC discovery](06_stac_discovery.ipynb) | Eight Sentinel Items and one WorldPop DUG item; metadata, footprints and terms | [Run STAC](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/06_stac_discovery.ipynb) |
-| [7. USGS earthquake scenes](07_usgs_earthquake_scenes.ipynb) | 78 January 2024 Japan events; time, map, depth and 3D coordinates | [Run earthquakes](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/07_usgs_earthquake_scenes.ipynb) |
-| [8. CoralWatch](08_coralwatch.ipynb) | Twenty real colonies in one survey; paired scores and descriptive groups | [Run CoralWatch](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/08_coralwatch.ipynb) |
-| [9. Storytelling and GIS](09_storytelling_and_gis.ipynb) | Original earthquake story panels; GeoJSON, CSV, HTML and provenance exports | [Run story/GIS](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/09_storytelling_and_gis.ipynb) |
+| [1. Repository atlas](01_repository_atlas.ipynb) | 18 pinned source reviews; tables, matrix and bipartite connections | [Run atlas](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/01_repository_atlas.ipynb) |
+| [2. NASA climate](02_nasa_climate.ipynb) | Global annual anomaly estimates; lines, heatmaps and baselines | [Run climate](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/02_nasa_climate.ipynb) |
+| [3. NOAA sea level](03_noaa_sea_level.ipynb) | 300 monthly means at Sewells Point; season, trend and residuals | [Run sea level](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/03_noaa_sea_level.ipynb) |
+| [4. Historical cholera](04_historical_cholera.ipynb) | 250 locations / 489 recorded deaths; symbol area, weighted grids and distances | [Run cholera](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/04_historical_cholera.ipynb) |
+| [5. Spatial privacy](05_spatial_privacy.ipynb) | Hypothetical perturbations of historical points; displacement and aggregation utility | [Run privacy](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/05_spatial_privacy.ipynb) |
+| [6. STAC discovery](06_stac_discovery.ipynb) | Eight Sentinel Items and one WorldPop DUG item; metadata, footprints and terms | [Run STAC](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/06_stac_discovery.ipynb) |
+| [7. USGS earthquake scenes](07_usgs_earthquake_scenes.ipynb) | 78 January 2024 Japan events; time, map, depth and 3D coordinates | [Run earthquakes](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/07_usgs_earthquake_scenes.ipynb) |
+| [8. CoralWatch](08_coralwatch.ipynb) | Twenty real colonies in one survey; paired scores and descriptive groups | [Run CoralWatch](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/08_coralwatch.ipynb) |
+| [9. Storytelling and GIS](09_storytelling_and_gis.ipynb) | Original earthquake story panels; GeoJSON, CSV, HTML and provenance exports | [Run story/GIS](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/09_storytelling_and_gis.ipynb) |
 
 The original [interactive earthquake story](https://jltobias.github.io/JupyterLite-Data-Visualization/repository-examples/)
 provides inspectable 2D/3D controls, a table, downloads, and explicit depth/CRS
@@ -51,13 +51,15 @@ Copernicus notice. No unlicensed authored notebooks or figures were copied.
 
 ## Run and save
 
-In Lab, open `repository_examples/`, select the Python (Pyodide) kernel and run
+In Lab, open the corrected `repository_examples_v2/` release, select the Python (Pyodide) kernel and run
 from the first cell. On desktop, keep each notebook alongside `repo_examples.py`
 and `data/`; launching from the repository or content root is also supported.
 Missing or altered snapshots fail clearly instead of substituting observations.
 Keep `data/` unchanged. Lesson 9 writes new artifacts under `exports/` and supplies
 direct download links. Download your notebooks and exports to persist them
-outside browser storage. Existing browser-saved files are retained.
+outside browser storage. Existing browser-saved files are retained in their original locations; the older
+`repository_examples/` copies are not erased. Use the corrected release links
+above to avoid an older saved notebook or helper.
 
 Native RustGIS, GeoAI, QGIS, GDAL, hosted viewers and JupyterGIS workspaces are
 external continuation routes with their own runtime and provider requirements.

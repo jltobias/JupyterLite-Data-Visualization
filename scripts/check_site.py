@@ -52,6 +52,7 @@ def main():
     assert len(COMPANIONS) == 9, "Expected nine companion notebooks"
     for source in COMPANIONS:
         expected.extend([f"files/repository_examples/{source.name}",
+                         f"files/repository_examples_v2/{source.name}",
                          f"book/content/repository_examples/{source.stem}.html"])
     for relative in expected:
         assert (SITE / relative).is_file(), f"Missing advertised destination: {relative}"
@@ -110,6 +111,8 @@ def main():
     for source in COMPANIONS:
         published = SITE / "files/repository_examples" / source.name
         assert json.loads(source.read_text(encoding="utf-8")) == json.loads(published.read_text(encoding="utf-8")), published
+        fresh = SITE / "files/repository_examples_v2" / source.name
+        assert json.loads(source.read_text(encoding="utf-8")) == json.loads(fresh.read_text(encoding="utf-8")), fresh
         page = Links()
         page.feed((SITE / f"book/content/repository_examples/{source.stem}.html").read_text(encoding="utf-8"))
         figures = [s for s in page.targets if "_images/" in s or s.startswith("data:image/")]
@@ -123,8 +126,13 @@ def main():
     for name, record in index["files"].items():
         assert record["source"] in index["sources"], name
         assert hashlib.sha256((packaged / name).read_bytes()).hexdigest() == record["sha256"], f"Published snapshot differs: {name}"
-    assert not (SITE / "files/repository_examples/exports").exists(), "Personal/generated exports entered Lite content"
-    assert not list((SITE / "files/repository_examples").glob(".data-*")), "Snapshot staging directory entered publication"
+        assert hashlib.sha256((SITE / "files/repository_examples_v2/data" / name).read_bytes()).hexdigest() == record["sha256"], name
+    for name in ["repo_examples.py", "data/manifest.json"]:
+        assert (SITE / "files/repository_examples_v2" / name).read_bytes() == (ROOT / "content/repository_examples" / name).read_bytes(), name
+    for directory in ["repository_examples", "repository_examples_v2"]:
+        published_lessons = SITE / "files" / directory
+        assert not (published_lessons / "exports").exists(), "Personal/generated exports entered Lite content"
+        assert not list(published_lessons.glob(".data-*")), "Snapshot staging directory entered publication"
     scene = SITE / "repository-examples"
     provenance = json.loads((scene / "provenance.json").read_text(encoding="utf-8"))
     assert hashlib.sha256((scene / "scene-data.json").read_bytes()).hexdigest() == provenance["scene_sha256"]

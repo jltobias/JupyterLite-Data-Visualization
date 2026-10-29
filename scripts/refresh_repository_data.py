@@ -18,8 +18,11 @@ import re
 import shutil
 import uuid
 from urllib.request import Request, urlopen
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "content/repository_examples"))
+from repo_examples import transport_fingerprints
 DEST = ROOT / "content/repository_examples/data"
 CLIMATE = "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/"
 CHOLERA = "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/"
@@ -110,6 +113,8 @@ def validate_staged(directory: Path) -> None:
         require(path.resolve().is_relative_to(directory.resolve()), f"unsafe path: {name}")
         raw = path.read_bytes()
         require(record["source"] in SOURCES and len(raw) == record["bytes"] and hashlib.sha256(raw).hexdigest() == record["sha256"], f"manifest bytes/source mismatch: {name}")
+        for key, expected in transport_fingerprints(name, raw).items():
+            require(record.get(key) == expected, f"JSON transport fingerprint mismatch: {name}")
         if record.get("columns") is not None:
             table = rows(name)
             require(len(table) == record["rows"] and list(table[0]) == record["columns"], f"CSV schema/rows: {name}")
@@ -272,7 +277,8 @@ def refresh() -> None:
         path = stage / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
-        manifest["files"][name] = {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "source": source, "url": url, "columns": columns, "rows": rows, "transformation": transformation}
+        manifest["files"][name] = {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "source": source, "url": url, "columns": columns, "rows": rows, "transformation": transformation,
+                                  **transport_fingerprints(name, data)}
 
     def download(name, source, url):
         data = fetch(url)

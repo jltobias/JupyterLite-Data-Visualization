@@ -13,7 +13,7 @@ Read the illustrated visualization catalog in a Jupyter Book, then edit and run 
 
 The splash is original AI-generated conceptual artwork, created for this project. The map and underground scene are illustrations, not measured data. [Generation prompt and provenance](assets/visualization-splash.prompt.txt).
 
-The existing catalog uses synthetic teaching data and simplified diagrams. Nine new [repository-inspired companion lessons](content/repository_examples/index.md) use small, checksum-validated real-data snapshots with original code, several views, interpretation, exercises and full attribution. [Read the companion lessons](https://jltobias.github.io/JupyterLite-Data-Visualization/book/content/repository_examples/index.html), [run the atlas](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples/01_repository_atlas.ipynb), or [inspect the earthquake story](https://jltobias.github.io/JupyterLite-Data-Visualization/repository-examples/). The broader 100-method expansion and full GIS workspace integrations remain separate draft work.
+The existing catalog uses synthetic teaching data and simplified diagrams. Nine new [repository-inspired companion lessons](content/repository_examples/index.md) use small, checksum-validated real-data snapshots with original code, several views, interpretation, exercises and full attribution. [Read the companion lessons](https://jltobias.github.io/JupyterLite-Data-Visualization/book/content/repository_examples/index.html), [run the atlas](https://jltobias.github.io/JupyterLite-Data-Visualization/lab/index.html?path=repository_examples_v2/01_repository_atlas.ipynb), or [inspect the earthquake story](https://jltobias.github.io/JupyterLite-Data-Visualization/repository-examples/). The broader 100-method expansion and full GIS workspace integrations remain separate draft work.
 
 Periodic Table of Visualization Methods:  https://www.visual-literacy.org/periodic_table/periodic_table.html
 
@@ -185,6 +185,18 @@ software terms do not automatically cover every dataset, figure, or linked servi
 | [Geoprivacy](https://github.com/PHI-Case-Studies/2023-Ethical-Practice-Geospatial-Data-Science/blob/9cd3b73ca2a3630335cd74753e38b819871e3974/README.md) | `9cd3b73ca2a3630335cd74753e38b819871e3974` | README Apache assertion; no license file |
 | [I-LEAD](https://github.com/PHI-Case-Studies/2024-I-LEAD-Visualization/blob/57cf61c19e1e59c2b7b4a9f107cb5d74c8f479b9/README.md) | `57cf61c19e1e59c2b7b4a9f107cb5d74c8f479b9` | GPL-3.0 file; data terms unverified |
 
+The current Lab links open the corrected `repository_examples_v2/` release.
+This fresh directory leaves older browser-saved notebooks and edits intact.
+The maintained source remains `content/repository_examples/`. Run the setup cell
+from the top in a fresh kernel when switching releases.
+
+JupyterLite exposes JSON through its Contents/DriveFS layer, which may change
+indentation, key order and numeric spelling (for example, `1.0` to `1`). Source
+and published artifacts retain their exact byte hashes. Notebook validation also
+checks a versioned JSON value fingerprint so equivalent serialization is accepted,
+while changed values, strings, types and array order are still rejected. CSV,
+license and other non-JSON files retain strict byte validation.
+
 ## Local validation
 
 Companion evidence and independent notebook checks:
@@ -214,6 +226,9 @@ node scripts/check_repository_pyodide.mjs
 This explicit development download places hash-checked Pyodide 0.29.3 and its
 package wheels in ignored `_build/` storage. Each lesson then executes unchanged
 in a separate WASM process with actual piplite 0.7.2, NumPy, pandas and Matplotlib.
+The isolated filesystem receives JSON through the real `JSON.parse` /
+`JSON.stringify` transformation used by Contents/DriveFS, rather than a direct
+mount of the original files.
 It checks browser Python compatibility; JupyterLite UI/service-worker storage and
 optional deck.gl/GPU rendering still require a browser inspection.
 

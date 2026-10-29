@@ -16,6 +16,7 @@ BUILD = ROOT / "_build"
 SITE = ROOT / "dist"
 SOURCE_NOTEBOOK = "periodic_table_visualization_methods_python_examples_jupyterlite_REVISED.ipynb"
 RELEASE_NOTEBOOK = "visualization_methods_v2.ipynb"
+COMPANION_RELEASE = "repository_examples_v2"
 
 
 def run(*args: str) -> None:
@@ -60,6 +61,16 @@ def main() -> None:
     lite_content = BUILD / "lite-content"
     shutil.copytree(ROOT / "content", lite_content, dirs_exist_ok=True,
                     ignore=shutil.ignore_patterns("__pycache__", "exports", ".data-refresh-*", ".data-previous"))
+    # A new directory bypasses older browser-saved notebooks/helpers without
+    # deleting or overwriting the learner's copies at repository_examples/.
+    release_dir = lite_content / COMPANION_RELEASE
+    resolved_release = release_dir.resolve()
+    if resolved_release.parent != lite_content.resolve() or not resolved_release.is_relative_to(ROOT.resolve()):
+        raise ValueError(f"Invalid generated companion release directory: {release_dir}")
+    if release_dir.exists():
+        shutil.rmtree(resolved_release)
+    shutil.copytree(ROOT / "content/repository_examples", release_dir,
+                    ignore=shutil.ignore_patterns("__pycache__", "exports", ".data-refresh-*", ".data-previous"))
     # A fresh path avoids a previous browser-saved notebook taking precedence.
     # It leaves the reader's older files and edits in their existing browser store.
     shutil.copy2(ROOT / "content" / SOURCE_NOTEBOOK, lite_content / RELEASE_NOTEBOOK)
@@ -74,7 +85,8 @@ def main() -> None:
     export_license_files()
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     (SITE / "build-info.json").write_text(
-        json.dumps({"revision": revision, "notebook": RELEASE_NOTEBOOK}, indent=2) + "\n",
+        json.dumps({"revision": revision, "notebook": RELEASE_NOTEBOOK,
+                    "companions": COMPANION_RELEASE}, indent=2) + "\n",
         encoding="utf-8",
     )
     run(sys.executable, str(ROOT / "scripts" / "check_site.py"))

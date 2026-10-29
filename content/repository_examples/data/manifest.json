@@ -131,7 +131,9 @@
       "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/provenance.json",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "0dfbd1a8f178794b0716da3f4b93afe0276cb24f5897872ffa72be5f11d136c7",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "coral/coralwatch_random_survey_20.csv": {
       "sha256": "13481ef25fd65ae103e80a5d27bfbb0ad077e1bde80c89bc7b16977253bded03",
@@ -160,7 +162,9 @@
       "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-Climate-and-Health/248f9860d189502013b36b3c4271777edafc4f7f/content/data/coralwatch_random_survey_20.metadata.json",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "ddc5a1b7e0fc5a302f15d7d4f3bbe76547b3012737cbb37f3c8a09e2ce4c3e6d",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "cholera/cholera_deaths.csv": {
       "sha256": "1be1926dca480fe8c9a83b663e62758e57c7ebe6c296d6a32c5e93a50d62b40a",
@@ -206,7 +210,9 @@
       "url": "https://raw.githubusercontent.com/jltobias/JupyterLite-GeoLibre-GeoAI/dda3a4667a1267b5ac4858723c46d8c0c82cb7a6/book/notebooks/data/cholera/provenance.json",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "4ea07b628095edcfeb68fa1ee693edd3bdf4d91121ba1356686b56286cf2bb4b",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "cholera/LICENSE": {
       "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
@@ -224,7 +230,9 @@
       "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=monthly_mean&application=JupyterLiteDataVisualization&begin_date=20000101&end_date=20241231&datum=MSL&station=8638610&time_zone=gmt&units=metric&format=json",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "f3e894fd0ea9a2094025b6fe888a5a851e17f6f3806b6dcc06a50bfb69fb62de",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "noaa/monthly.csv": {
       "sha256": "8d526956f822f0bbc0966b182300d91b5a09f7b3d5be6a6ccc553312939c7cc9",
@@ -249,7 +257,9 @@
       "url": "https://api.stac.worldpop.org/collections/UGA/items/UGA_DUG_2020",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "c4126ddea7c5f78f73b5c141d7ba341d3a69d480ef632005ed2987bd36e211fb",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "stac/worldpop-collection.json": {
       "sha256": "e3409c17330dbe5644cc9055e9f8d021959dfd1fdea152521687266d43b52d97",
@@ -258,7 +268,9 @@
       "url": "https://api.stac.worldpop.org/collections/UGA",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "9e3b3036350a716c689ff8b8a9892dae33a418d5a53dd97f54f9c87c7ed276d7",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "stac/sentinel-search.json": {
       "sha256": "5ed110ff59ef898575c9d7026da36a5c857d82f81eb07f86718970ebe515194f",
@@ -267,7 +279,9 @@
       "url": "https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a&bbox=25.7%2C-24.9%2C26.2%2C-24.4&datetime=2024-01-01T00%3A00%3A00Z%2F2024-01-31T23%3A59%3A59Z&limit=8",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "c61a957cce904615d0afc78a8f9d5b59fd29653b7d271bcf0093246209097056",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "stac/sentinel-collection.json": {
       "sha256": "9c5fe9a8c8785d8439a1697cd91adc21f7ac45f7f3b95786c1398904c413975e",
@@ -276,7 +290,9 @@
       "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "93aceba2ee414e57a3eccd15cf883764e82aa28ba6fe5674e1bb55b1c3b85d18",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "usgs/events.geojson": {
       "sha256": "385718a4fe92e98ad301efe3f2ae0d96557aa53faafc62b48785e239f3b90cfa",
@@ -285,7 +301,9 @@
       "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-02-01&minmagnitude=4.5&minlatitude=30&maxlatitude=46&minlongitude=128&maxlongitude=148&orderby=time-asc",
       "columns": null,
       "rows": null,
-      "transformation": null
+      "transformation": null,
+      "json_value_sha256": "870fd59b321b52f66f7d718542ee71e0409cfe72e6d216474a1210b4c78ec2b6",
+      "json_value_algorithm": "typed-json-values-v1"
     },
     "usgs/events.csv": {
       "sha256": "1a1f3f563cd963561b459c12f3001fced4c7ed196eba74826c1b8130c255d057",
